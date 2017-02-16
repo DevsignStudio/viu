@@ -1,0 +1,59 @@
+.viu-checkbox {
+    height: 48px;
+    width: 48px;
+    cursor: pointer;
+    display: inline-block;
+    &-check,
+    &-uncheck {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+    }
+    &-check {
+        color: $theme-primary;
+        @include transform(scale(0));
+        @include transition((all 0.2s $sharpCurve, opacity 0.25s $decelerationCurve));
+        opacity: 0;
+    }
+    &-uncheck {
+        color: rgba($color-black, 0.54);
+        @include transition((opacity 0.25s $accelerationCurve));
+    }
+    &-ripple {
+        width: 48px;
+        height: 48px;
+        @include border-radius(50%);
+        background: rgba($color-black, 0.1);
+        top: 0px;
+        left: 0px;
+        position: absolute;
+        @include transition(all 0.2s $decelerationCurve);
+        opacity: 0;
+        &.active {
+            opacity: 1;
+        }
+    }
+    input[type="checkbox"] {
+        display: none;
+        &:checked~.viu-checkbox-check {
+            @include transform(scale(1));
+            opacity: 1;
+        }
+        &:checked~.viu-checkbox-uncheck {
+            opacity: 0;
+        }
+        &:checked~.viu-checkbox-ripple {
+            background-color: rgba($theme-primary, 0.2);
+        }
+    }
+    input[type="checkbox"]:disabled,
+    input[type="checkbox"]:checked:disabled {
+        pointer-events: none;
+        &~.viu-checkbox-check,
+        &~.viu-checkbox-uncheck {
+            color: rgba($color-black, 0.26);
+        }
+    }
+}

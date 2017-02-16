@@ -1,0 +1,9 @@
+.peper-modal {
+    min-height: 360px;
+    width: 640px;
+    max-width: calc(100% - 16px);
+    max-height: calc(100% - 130px);
+    background: $color-white;
+    @include box-shadow($z2-shadow);
+    @include border-radius(2px);
+}

@@ -1,0 +1,20 @@
+.peper-avatar {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    @include border-radius(100%);
+    background: #212121;
+    color: white;
+    overflow: hidden;
+    @include transform(translateZ(0));
+    line-height: 48px;
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+}

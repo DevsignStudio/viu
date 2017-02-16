@@ -1,0 +1,10 @@
+.fade-top-right {
+    opacity: 0;
+    @include transform(translate(20px,-4px));
+    @include transition((transform 0s $decelerationCurve, opacity 0s $decelerationCurve));
+    &.show {
+        opacity: 1;
+        @include transform(translate(0,0));
+        @include transition((transform opacity 0.3s $decelerationCurve, opacity 0.3s $decelerationCurve));
+    }
+}

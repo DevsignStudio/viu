@@ -1,0 +1,104 @@
+.viu-textfield {
+    padding-top: 28px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 72px;
+
+    &-line {
+        width: 100%;
+        border-bottom: 2px solid $theme-color;
+        position: absolute;
+        bottom: 9px;
+        left: 0;
+        @include transform(scaleX(0) translateZ(0));
+        @include transform-origin((0,50%));
+        @include transition(all 0.2s $decelerationCurve);
+    }
+
+    &-floating-placeholder {
+        position: absolute;
+        top: 34px;
+        left: 0;
+        font-size: 16px;
+        color: $color-grey-500;
+        @include transform-origin((0));
+        @include transition(all 0.2s $decelerationCurve);
+        @include transform(translateZ(0));
+    }
+
+    &-message {
+        font-size: 12px;
+        color: $color-grey-500;
+        opacity: 0;
+        z-index: 0;
+        @include transform(translateY(-24px) translateZ(0));
+        @include transition(all 0.2s $decelerationCurve);
+
+        &.force-message {
+            @include transform(translateY(0) translateZ(0));
+            opacity: 1;
+        }
+    }
+
+    input {
+        z-index: 1;
+        width: 100%;
+        border: 0;
+        margin: 0;
+        padding: 8px 0;
+        padding-bottom: 7px;
+        background: transparent;
+        outline: none;
+        font-size: 16px;
+        line-height: 18px;
+        border-bottom: 1px solid $color-grey-300;
+        @include transform(translateZ(0));
+        &:focus {
+            & ~ .viu-textfield-line {
+                @include transform(scaleX(1) translateZ(0));
+            }
+
+            & ~ .viu-textfield-floating-placeholder, & ~ .viu-textfield-message {
+                color: $theme-color;
+            }
+
+            & ~ .viu-textfield-message {
+                opacity: 1;
+                @include transform(translateY(0) translateZ(0));
+            }
+        }
+
+        &.has-text, &:focus {
+            & ~ .viu-textfield-floating-placeholder {
+                @include transform(scale(0.75) translateY(-28px) translateZ(0));
+            }
+        }
+
+        &:disabled {
+            cursor: auto;
+            pointer-events: none;
+
+            & ~ .viu-textfield-floating-placeholder, & ~ .viu-textfield-message {
+                cursor: auto;
+                pointer-events: none;
+            }
+        }
+    }
+
+    &.is-info{
+        .viu-textfield-floating-placeholder,
+        .viu-textfield-message,
+        input {
+            color: $color-grey-700;
+        }
+
+        input {
+            border-bottom: 1px solid $color-grey-300;
+        }
+
+    }
+
+}

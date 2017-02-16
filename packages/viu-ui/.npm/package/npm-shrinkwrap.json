@@ -1,0 +1,89 @@
+{
+  "dependencies": {
+    "bellows-ui": {
+      "version": "6.0.1",
+      "resolved": "https://registry.npmjs.org/bellows-ui/-/bellows-ui-6.0.1.tgz",
+      "from": "bellows-ui@6.0.1"
+    },
+    "is-touch": {
+      "version": "1.0.2",
+      "resolved": "https://registry.npmjs.org/is-touch/-/is-touch-1.0.2.tgz",
+      "from": "is-touch@1.0.2"
+    },
+    "jquery": {
+      "version": "3.1.1",
+      "resolved": "https://registry.npmjs.org/jquery/-/jquery-3.1.1.tgz",
+      "from": "jquery@3.1.1"
+    },
+    "kute.js": {
+      "version": "1.5.96",
+      "resolved": "https://registry.npmjs.org/kute.js/-/kute.js-1.5.96.tgz",
+      "from": "kute.js@1.5.96"
+    },
+    "mobify-plugin": {
+      "version": "4.0.0",
+      "resolved": "https://registry.npmjs.org/mobify-plugin/-/mobify-plugin-4.0.0.tgz",
+      "from": "mobify-plugin@4.0.0"
+    },
+    "numeral": {
+      "version": "2.0.4",
+      "resolved": "https://registry.npmjs.org/numeral/-/numeral-2.0.4.tgz",
+      "from": "numeral@2.0.4"
+    },
+    "scrollmonitor": {
+      "version": "1.1.0",
+      "resolved": "https://registry.npmjs.org/scrollmonitor/-/scrollmonitor-1.1.0.tgz",
+      "from": "scrollmonitor@1.1.0"
+    },
+    "scrollreveal": {
+      "version": "3.3.2",
+      "resolved": "https://registry.npmjs.org/scrollreveal/-/scrollreveal-3.3.2.tgz",
+      "from": "scrollreveal@3.3.2"
+    },
+    "simplebar": {
+      "version": "2.0.3",
+      "resolved": "https://registry.npmjs.org/simplebar/-/simplebar-2.0.3.tgz",
+      "from": "simplebar@2.0.3"
+    },
+    "slick-carousel": {
+      "version": "1.6.0",
+      "resolved": "https://registry.npmjs.org/slick-carousel/-/slick-carousel-1.6.0.tgz",
+      "from": "slick-carousel@1.6.0"
+    },
+    "sugar": {
+      "version": "2.0.4",
+      "resolved": "https://registry.npmjs.org/sugar/-/sugar-2.0.4.tgz",
+      "from": "sugar@2.0.4"
+    },
+    "swiper": {
+      "version": "3.4.0",
+      "resolved": "https://registry.npmjs.org/swiper/-/swiper-3.4.0.tgz",
+      "from": "swiper@3.4.0"
+    },
+    "tilt.js": {
+      "version": "1.1.12",
+      "resolved": "https://registry.npmjs.org/tilt.js/-/tilt.js-1.1.12.tgz",
+      "from": "tilt.js@1.1.12"
+    },
+    "velocity-animate": {
+      "version": "1.4.2",
+      "resolved": "https://registry.npmjs.org/velocity-animate/-/velocity-animate-1.4.2.tgz",
+      "from": "velocity-animate@1.4.2"
+    },
+    "vue-charts": {
+      "version": "0.2.1",
+      "resolved": "https://registry.npmjs.org/vue-charts/-/vue-charts-0.2.1.tgz",
+      "from": "vue-charts@0.2.1"
+    },
+    "vue-lazyload": {
+      "version": "0.7.0",
+      "resolved": "https://registry.npmjs.org/vue-lazyload/-/vue-lazyload-0.7.0.tgz",
+      "from": "vue-lazyload@0.7.0"
+    },
+    "vue-touch": {
+      "version": "1.1.0",
+      "resolved": "https://registry.npmjs.org/vue-touch/-/vue-touch-1.1.0.tgz",
+      "from": "vue-touch@1.1.0"
+    }
+  }
+}

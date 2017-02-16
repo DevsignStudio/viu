@@ -1,0 +1,49 @@
+** Message: manager.vala:327: Creating default panel layout
+** Message: libsession.vala:50: DESKTOP_AUTOSTART_ID not set, session registration may be broken (not running budgie-desktop?)
+
+(budgie-panel:15300): GLib-GIO-CRITICAL **: g_settings_reset: assertion 'key != NULL' failed
+WARNING : Shell not installed or running
+WARNING : Shell not running
+None
+WARNING : Error detecting shell
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gtweak/tweaks/tweak_group_shell_extensions.py", line 275, in __init__
+    raise Exception("Shell not running or DBus service not available")
+Exception: Shell not running or DBus service not available
+
+** (gnome-control-center:15653): WARNING **: Ignoring launcher deja-dup-preferences (missing desktop file)
+
+** (gnome-control-center:15653): WARNING **: Ignoring launcher gufw (missing desktop file)
+
+** (gnome-control-center:15653): WARNING **: Ignoring launcher landscape-client-settings (missing desktop file)
+
+** (gnome-control-center:15653): WARNING **: Ignoring launcher language-selector (missing desktop file)
+
+** (gnome-control-center:15653): WARNING **: Ignoring launcher ubuntuone-installer (missing desktop file)
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  busybox-static language-selector-common libmetacity0 libtimezonemap-data
+  libtimezonemap1 lsof metacity-common rsync sbsigntool xul-ext-ubufox
+Use 'apt autoremove' to remove them.
+The following packages will be REMOVED:
+  arc-firefox-theme firefox
+0 upgraded, 0 newly installed, 2 to remove and 0 not upgraded.
+After this operation, 123 MB disk space will be freed.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 330607 files and directories currently installed.)
+Removing arc-firefox-theme (51.20170123-0ubuntu2) ...
+Removing firefox (51.0.1+build2-0ubuntu0.16.10.2) ...
+Processing triggers for mime-support (3.60ubuntu1) ...
+Processing triggers for desktop-file-utils (0.23-1ubuntu1) ...
+Processing triggers for bamfdaemon (0.5.3+16.10.20160929-0ubuntu1) ...
+Rebuilding /usr/share/applications/bamf-2.index...
+Processing triggers for man-db (2.7.5-1) ...
+Processing triggers for gnome-menus (3.13.3-6ubuntu5.1) ...
+Using /usr/share/budgie-welcome/ path.
+[Apt] Reloading cache... 
+[Apt] Cache reloaded. 
+Close requested

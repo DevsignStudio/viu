@@ -1,0 +1,38 @@
+.simplebar {
+    position: relative;
+    z-index: 0;
+    height: 100%;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    @include transform(translateZ(0));
+    .simplebar-track {
+        &.vertical {
+            width: 4px;
+            .simplebar-scrollbar {
+                width: 4px;
+                right: 0;
+                border-radius: 0;
+                &.visible {
+                    opacity: 0.5;
+                }
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+        }
+        &.horizontal {
+            height: 6px;
+            .simplebar-scrollbar {
+                height: 6px;
+                bottom: 0;
+                border-radius: 0;
+                &.visible {
+                    opacity: 0.5;
+                }
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}

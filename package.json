@@ -1,0 +1,24 @@
+{
+  "name": "peper-boilerplate",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "desktop": "meteor-desktop"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.18.0",
+    "bcrypt": "^1.0.1",
+    "core-js": "^2.4.1",
+    "meteor-node-stubs": "~0.2.0",
+    "sugar": "^2.0.4",
+    "vue": "^2.0.8",
+    "vue-head": "^2.0.10",
+    "vue-meta": "^0.5.3",
+    "vue-meteor-tracker": "^1.0.3",
+    "vue-router": "^2.0.0-rc.5"
+  },
+  "devDependencies": {
+    "meteor-desktop": "^0.2.2",
+    "vue": "^2.0.0-rc.8"
+  }
+}

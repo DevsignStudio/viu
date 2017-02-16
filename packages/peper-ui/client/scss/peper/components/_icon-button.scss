@@ -1,0 +1,94 @@
+.peper-icon-button {
+	width: 48px;
+	height: 48px;
+	display: block;
+	padding: 12px;
+	color: inherit;
+	background: transparent;
+	margin: 0;
+	border: 0;
+	@include border-radius(50%);
+	cursor: pointer;
+	@include transition(background 0.2s $easeInOutNew);
+	position: relative;
+	@include transform(translateZ(0));
+	display: inline-block;
+	float: left;
+
+	&.center {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.ripple-circle {
+		background: $color-grey-400;
+	}
+
+	&:hover, &.hover, &:focus {
+		background: rgba(0,0,0,0.05);
+	}
+
+	 &.pressed {
+		background: rgba(0,0,0,0.1);
+	}
+
+	&:disabled, &.disabled, &.disabled:focus {
+		color: $color-grey-500;
+		background: transparent;
+		@include box-shadow(none);
+		pointer-events: none;
+	}
+
+	&.primary {
+		color: $theme-primary;
+
+		.ripple-circle {
+			background: $theme-primary-200;
+		}
+
+		&:hover, &.hover, &:focus {
+			background: rgba(63,81,181,0.20);
+		}
+
+		 &.pressed {
+			background: rgba(63,81,181,0.40);
+		}
+
+		&:disabled, &.disabled, &.disabled:focus {
+			color: $color-grey-500;
+			background: transparent;
+			@include box-shadow(none);
+			pointer-events: none;
+		}
+	}
+
+	&.accent {
+		color: $theme-accent;
+
+		.ripple-circle {
+			background: $theme-accent-200;
+		}
+
+		&:hover, &.hover, &:focus {
+			background: rgba(233,30,99,0.20);
+		}
+
+		 &.pressed {
+			background: rgba(233,30,99,0.40);
+		}
+
+		&:disabled, &.disabled, &.disabled:focus {
+			color: $color-grey-500;
+			background: transparent;
+			@include box-shadow(none);
+			pointer-events: none;
+		}
+	}
+
+	@include webkit-fix {
+		.mdi:before {
+			line-height: 26px;
+		}
+		padding-bottom: 10px;
+	}
+}

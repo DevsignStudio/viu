@@ -1,0 +1,30 @@
+.viu-tooltip {
+    background-color: $color-grey-700;
+    opacity: 0.9;
+    position: absolute;
+    z-index: 1000;
+    color: $color-white;
+    font-size: 14px;
+    line-height: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+    @include border-radius(2px);
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    @include transition(all 0.2s $sharpCurve);
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        @include transform(translateY(14px));
+        &.bottom {
+            @include transform(translateY(-14px));
+        }
+    }
+    @include breakpoint("xd") {
+        font-size: 10px;
+        line-height: 22px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}

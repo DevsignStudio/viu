@@ -1,0 +1,123 @@
+table {
+    border-spacing: 0;
+    width: 100%;
+    thead {
+        margin-left: 12px;
+        margin-right: 12px;
+        tr {
+            height: 56px;
+            border-spacing: 0;
+            th {
+                cursor: default;
+                padding-top: 16px;
+                padding-bottom: 16px;
+                padding-left: 12px;
+                padding-right: 12px;
+                border-spacing: 0;
+                font-size: 12px;
+                line-height: 24px;
+                color: $color-grey-600;
+                font-weight: 500;
+                text-align: left;
+                white-space: nowrap;
+                &:first-child {
+                    padding-left: 24px;
+                }
+                &:last-child {
+                    padding-right: 24px;
+                }
+                &.th-number {
+                    text-align: right;
+                    padding-left: 56px;
+                }
+                &.th-checkbox {
+                    width: 52px;
+                }
+            }
+        }
+    }
+    tbody {
+        margin-left: 12px;
+        margin-right: 12px;
+        tr {
+            height: 48px;
+            border-spacing: 0;
+            @include transition(all 0.2s $sharpCurve);
+            td {
+                padding: 12px;
+                padding-top: 11px;
+                border-spacing: 0;
+                font-size: 13px;
+                border-top: 1px solid $color-grey-200;
+                line-height: 24px;
+                white-space: nowrap;
+                &:first-child {
+                    padding-left: 24px;
+                }
+                &:last-child {
+                    padding-right: 24px;
+                }
+                &.td-number {
+                    text-align: right;
+                }
+                &.td-action {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    overflow-y: hidden;
+                    text-align: right;
+                    .peper-icon-button {
+                        width: 47px;
+                        height: 47px;
+                        margin: 0;
+                        margin-bottom: -8px;
+                        float: none;
+                        display: inline-block;
+                        overflow: hidden;
+                        .mdi {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                background: $color-grey-200;
+            }
+            &.selected {
+                background: $color-grey-100;
+            }
+        }
+    }
+}
+
+.table-footer {
+    height: 56px;
+    border-top: 1px solid $color-grey-200;
+    padding: 4px 12px;
+}
+
+.cards-table {
+    .simplebar-scroll-content {
+        overflow-x: auto;
+    }
+    &.sortable {
+        th:not(.unsortable) {
+            cursor: pointer;
+            .sort-icon {
+                opacity: 0;
+                font-size: 14px;
+                @include transition(all 0.2s $sharpCurve);
+            }
+            &.desc {
+                .sort-icon {
+                    @include transform(rotate(180deg));
+                }
+            }
+            &.active {
+                .sort-icon {
+                    opacity: 1;
+                }
+                color: $color-grey-800;
+            }
+        }
+    }
+}

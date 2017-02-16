@@ -1,0 +1,45 @@
+.peper-snackbar {
+    position: fixed;
+    z-index: 2000;
+    max-width: 100%;
+    width: 100%;
+    background: $color-grey-800;
+    min-height: 48px;
+    line-height: 20px;
+    font-size: 14px;
+    color: $color-white;
+    padding: 6px 24px;
+    bottom: 0px;
+    left: 0;
+    @include renderIssue();
+    @include transition(all 0.15s $decelerationCurve);
+    @include transform(translateY(100%) translateZ(0));
+    @include breakpoint("xd") {
+        min-width: 288px;
+        max-width: 568px;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        left: 50%;
+        @include transform(translateY(100%) translateX(-50%) translateZ(0));
+        @include box-shadow($top-z1-shadow);
+    }
+    .flat-button {
+        margin: 0;
+    }
+    .text-content {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        min-width: 200px;
+        display: table;
+        @include breakpoint("xd") {
+            min-width: 400px;
+        }
+    }
+    &.show {
+        @include transition(all 0.15s $decelerationCurve 0.5s);
+        @include transform(translateY(0) translateZ(0));
+        @include breakpoint("xd") {
+            @include transform(translateY(0) translateX(-50%) translateZ(0));
+        }
+    }
+}

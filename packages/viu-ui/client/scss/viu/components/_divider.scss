@@ -1,0 +1,14 @@
+.viu-divider {
+    width: 100%;
+    @include clearfix();
+    background-color: $color-grey-200;
+    height: 1px;
+
+    &.top-margin {
+        margin-top: 8px;
+    }
+
+    &.bottom-margin {
+        margin-bottom: 8px;
+    }
+}
