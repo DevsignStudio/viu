@@ -4,10 +4,12 @@
         <div class="col-xs" style="height:100%; overflow: hidden;">
             <div style="height:100%;">
                 <scroll-bar>
-                    <router-view name="toolbar"></router-view>
-                    <router-view ></router-view>
-                    <confirmation-dialog id="confirmationDialogforPlugin">
-                    </confirmation-dialog>
+                    <span>
+                        <router-view name="toolbar"></router-view>
+                        <router-view ></router-view>
+                        <confirmation-dialog id="confirmationDialogforPlugin">
+                        </confirmation-dialog>
+                    </span>
                 </scroll-bar>
             </div>
         </div>

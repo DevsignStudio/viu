@@ -3266,6 +3266,12 @@ a {
     left: 0;
     overflow: hidden; }
 
+.appbar-padding {
+  padding-top: 56px; }
+  @media (min-width: 768px) {
+    .appbar-padding {
+      padding-top: 64px; } }
+
 button.raised-button,
 a.raised-button {
   background: #f5f5f5;
@@ -3797,6 +3803,62 @@ a.color-button {
       padding-bottom: 10px; }
       .viu-icon-button .mdi:before {
         line-height: 26px; } }
+
+.viu-list {
+  padding-top: 4px; }
+  .viu-list .viu-list-item {
+    width: 100%;
+    line-height: 28px;
+    padding: 6px 16px;
+    font-size: 13px;
+    cursor: default;
+    -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.6, 1);
+    -moz-transition: all 0.2s cubic-bezier(0.4, 0, 0.6, 1);
+    -ms-transition: all 0.2s cubic-bezier(0.4, 0, 0.6, 1);
+    -o-transition: all 0.2s cubic-bezier(0.4, 0, 0.6, 1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.6, 1); }
+    .viu-list .viu-list-item .mdi {
+      margin-right: 32px;
+      color: #616161; }
+    .viu-list .viu-list-item .peper-avatar {
+      display: inline-block;
+      vertical-align: middle;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      margin-right: 20px; }
+    .viu-list .viu-list-item .right-content {
+      margin-top: 4px;
+      float: right; }
+      .viu-list .viu-list-item .right-content .mdi {
+        margin-right: 0; }
+  .viu-list.not-auto-dense .viu-list-item {
+    padding: 8px 16px;
+    font-size: 16px;
+    line-height: 32px; }
+    .viu-list.not-auto-dense .viu-list-item .peper-avatar {
+      display: inline-block;
+      vertical-align: middle;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      margin-right: 16px; }
+  @media (min-width: 768px) {
+    .viu-list {
+      padding-top: 8px; }
+      .viu-list .viu-list-item {
+        padding: 8px 16px;
+        font-size: 16px;
+        line-height: 32px; }
+        .viu-list .viu-list-item .peper-avatar {
+          display: inline-block;
+          vertical-align: middle;
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          margin-right: 16px; } }
+  .viu-list.hover .viu-list-item:hover {
+    background-color: rgba(0, 0, 0, 0.1); }
 
 .peper-modal {
   min-height: 360px;

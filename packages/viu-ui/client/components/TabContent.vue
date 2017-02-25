@@ -13,12 +13,20 @@
     export default {
         props: {
             element: String,
+            size: {
+                default: 3,
+                type: Number,
+            },
         },
         mounted(){
             var self= this;
             self.$nextTick(()=> {
+                let siblingsHeight = 0;
+                $(self.$el).siblings().each(function() {
+                    siblingsHeight += $(this).outerHeight();
+                });
                 $(self.$el).find(".swipe-tab-content").each(function() {
-                    this.style.height = self.$el.parentNode.clientHeight + "px";
+                    this.style.height = (self.$el.parentNode.offsetHeight - siblingsHeight -2) + "px";
                 });
                 var $swipeTabsContainer = $(self.element).find('.swipe-tabs'),
                     $swipeTabs = $swipeTabsContainer.find('.swipe-tab'),
@@ -35,7 +43,7 @@
                 });
 
                 $swipeTabsContainer.slick({
-                    slidesToShow: 3,
+                    slidesToShow: self.size,
                     slidesToScroll: 1,
                     arrows: false,
                     infinite: false,

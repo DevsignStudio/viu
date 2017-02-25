@@ -66,8 +66,7 @@ export default {
 
             } else {
                 $el.on("click", function() {
-                    $(".peper-side-navigation-overlay").removeClass('active');
-                    $el.parents(".peper-side-navigation").removeClass('active');
+                    $el.parents(".viu-side-navigation").removeClass('open');
                     self.$emit("click");
                 })
             }

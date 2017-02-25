@@ -63,3 +63,10 @@
         overflow: hidden;
     }
 }
+
+.appbar-padding {
+    padding-top: 56px;
+    @include breakpoint("xd") {
+        padding-top: 64px;
+    }
+}

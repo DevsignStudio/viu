@@ -1,0 +1,58 @@
+@mixin notDense() {
+    .viu-list-item {
+        padding: 8px 16px;
+        font-size: 16px;
+        line-height: 32px;
+        .peper-avatar {
+            display: inline-block;
+            vertical-align: middle;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            margin-right: 16px;
+        }
+    }
+}
+
+.viu-list {
+    padding-top: 4px;
+    .viu-list-item {
+        width: 100%;
+        line-height: 28px;
+        padding: 6px 16px;
+        font-size: 13px;
+        cursor: default;
+        @include transition(all 0.2s $sharpCurve);
+        .mdi {
+            margin-right: 32px;
+            color: $color-grey-700;
+        }
+        .peper-avatar {
+            display: inline-block;
+            vertical-align: middle;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            margin-right: 20px;
+        }
+        .right-content {
+            margin-top: 4px;
+            float: right;
+            .mdi {
+                margin-right: 0;
+            }
+        }
+    }
+    &.not-auto-dense {
+        @include notDense();
+    }
+    @include breakpoint("xd") {
+        padding-top: 8px;
+        @include notDense();
+    }
+    &.hover {
+        .viu-list-item:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+}
