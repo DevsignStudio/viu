@@ -570,3 +570,19 @@ $raised-button-pressed-shadow: 0 6px 5px rgba(#000, 0.09),
         @content;
     }
 }
+
+@mixin displayFlex() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin flex($var) {
+    -webkit-box-flex: $var;
+    -moz-box-flex: $var;
+    -webkit-flex: $var;
+    -ms-flex: $var;
+    flex: $var;
+}

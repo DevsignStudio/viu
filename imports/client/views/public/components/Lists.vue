@@ -9,83 +9,104 @@
                 <tab-content-item>
                     <list class="hover">
                         <list-item>
-                            <icon name="solid"></icon>Nizul Zaim
+                            <span slot="left">
+                                <icon name="solid"></icon>
+                            </span>
+                            Nizul Zaim
                         </list-item>
                         <list-item>
-                            <icon name="solid"></icon>Nizul Zaim
+                            <span slot="left">
+                                <icon name="solid"></icon>
+                            </span>
+                            Nizul Zaim
                         </list-item>
                         <list-item>
-                            <icon name="solid"></icon>Nizul Zaim
-                        </list-item>
-                        <list-item>
-                            <icon name="solid"></icon>Nizul Zaim
-                        </list-item>
-                        <list-item>
-                            <icon name="solid"></icon>Nizul Zaim
-                        </list-item>
-                        <list-item>
-                            <icon name="solid"></icon>Nizul Zaim
+                            <span slot="left">
+                                <icon name="solid"></icon>
+                            </span>
+                            Nizul Zaim
                         </list-item>
                     </list>
 
                     <list class="hover">
                         <list-item>
-                            <avatar text="Nizul Zaim"></avatar>Nizul Zaim
+                            <span slot="left">
+                                <avatar text="Nizul Zaim"></avatar>
+                            </span>
+                            Nizul Zaim
                         </list-item>
                         <list-item>
-                            <avatar text="Nizul Zaim"></avatar>Nizul Zaim
+                            <span slot="left">
+                                <avatar text="Nizul Zaim"></avatar>
+                            </span>
+                            Nizul Zaim
                         </list-item>
                         <list-item>
-                            <avatar text="Nizul Zaim"></avatar>Nizul Zaim
+                            <span slot="left">
+                                <avatar text="Nizul Zaim"></avatar>
+                            </span>
+                            Nizul Zaim
                         </list-item>
                         <list-item>
-                            <avatar text="Nizul Zaim"></avatar>Nizul Zaim
+                            <span slot="left">
+                                <avatar text="Nizul Zaim"></avatar>
+                            </span>
+                            Nizul Zaim
                         </list-item>
                         <list-item>
-                            <avatar text="Nizul Zaim"></avatar>Nizul Zaim
-                        </list-item>
-                        <list-item>
-                            <avatar text="Nizul Zaim"></avatar>Nizul Zaim
+                            <span slot="left">
+                                <avatar text="Nizul Zaim"></avatar>
+                            </span>
+                            Nizul Zaim
                         </list-item>
                     </list>
                     <list class="hover">
                         <list-item>
-                            <avatar text="Nizul Zaim"></avatar>Nizul Zaim
+                            <span slot="left">
+                                <avatar text="Nizul Zaim"></avatar>
+                            </span>
+                            Nizul Zaim
                             <span slot="right">
                                 <icon name="solid"></icon>
                             </span>
                         </list-item>
                         <list-item>
-                            <avatar text="Nizul Zaim"></avatar>Nizul Zaim
+                            <span slot="left">
+                                <avatar text="Nizul Zaim"></avatar>
+                            </span>
+                            Nizul Zaim
                             <span slot="right">
                                 <icon name="solid"></icon>
                             </span>
                         </list-item>
                         <list-item>
-                            <avatar text="Nizul Zaim"></avatar>Nizul Zaim
+                            <span slot="left">
+                                <avatar text="Nizul Zaim"></avatar>
+                            </span>
+                            Nizul Zaim
                             <span slot="right">
                                 <icon name="solid"></icon>
                             </span>
                         </list-item>
                         <list-item>
-                            <avatar text="Nizul Zaim"></avatar>Nizul Zaim
+                            <span slot="left">
+                                <avatar text="Nizul Zaim"></avatar>
+                            </span>
+                            Nizul Zaim
                             <span slot="right">
                                 <icon name="solid"></icon>
                             </span>
                         </list-item>
                         <list-item>
-                            <avatar text="Nizul Zaim"></avatar>Nizul Zaim
+                            <span slot="left">
+                                <avatar text="Nizul Zaim"></avatar>
+                            </span>
+                            Nizul Zaim
                             <span slot="right">
                                 <icon name="solid"></icon>
                             </span>
                         </list-item>
-                        <list-item>
-                            <avatar text="Nizul Zaim"></avatar>Nizul Zaim
-                            <span slot="right">
-                                <icon name="solid"></icon>
-                            </span>
-                        </list-item>
-                    </list>
+                    </list> 
                 </tab-content-item>
                 <tab-content-item>
                     <div style="height:4000px;">DIV</div>

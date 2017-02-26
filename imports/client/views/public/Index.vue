@@ -1,60 +1,6 @@
 <template>
     <div class="appbar-padding" v-wheight>
-        <div style="height: 100%;">
-            <tab id="tab">
-                <tab-item v-ripple>View</tab-item>
-                <tab-item v-ripple>Code</tab-item>
-            </tab>
-            <tab-content element="#tab" :size="2">
-                <tab-content-item>
-                    <list class="hover">
-                        <list-item>
-                            <icon name="solid"></icon>Nizul Zaim
-                        </list-item>
-                        <list-item>
-                            <icon name="solid"></icon>Nizul Zaim
-                        </list-item>
-                        <list-item>
-                            <icon name="solid"></icon>Nizul Zaim
-                        </list-item>
-                        <list-item>
-                            <icon name="solid"></icon>Nizul Zaim
-                        </list-item>
-                        <list-item>
-                            <icon name="solid"></icon>Nizul Zaim
-                        </list-item>
-                        <list-item>
-                            <icon name="solid"></icon>Nizul Zaim
-                        </list-item>
-                    </list>
-
-                    <list class="hover">
-                        <list-item>
-                            <avatar text="Nizul Zaim"></avatar> Nizul Zaim
-                        </list-item>
-                        <list-item>
-                            <avatar text="Nizul Zaim"></avatar> Nizul Zaim
-                        </list-item>
-                        <list-item>
-                            <avatar text="Nizul Zaim"></avatar> Nizul Zaim
-                        </list-item>
-                        <list-item>
-                            <avatar text="Nizul Zaim"></avatar> Nizul Zaim
-                        </list-item>
-                        <list-item>
-                            <avatar text="Nizul Zaim"></avatar> Nizul Zaim
-                        </list-item>
-                        <list-item>
-                            <avatar text="Nizul Zaim"></avatar> Nizul Zaim
-                        </list-item>
-                    </list>
-                </tab-content-item>
-                <tab-content-item>
-                    <div style="height:4000px;">DIV</div>
-                </tab-content-item>
-            </tab-content>
-        </div>
-        
+        <div style="height:100%"></div>
     </div>
     <!--<page-container style="height: 2000px; padding-top: 64px;">
         <checkbox name="k" v-model="input"></checkbox>

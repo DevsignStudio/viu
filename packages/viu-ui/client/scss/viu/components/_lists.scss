@@ -23,8 +23,10 @@
         font-size: 13px;
         cursor: default;
         @include transition(all 0.2s $sharpCurve);
+        @include displayFlex();
+        justify-content: center;
+        align-items: center;
         .mdi {
-            margin-right: 32px;
             color: $color-grey-700;
         }
         .peper-avatar {
@@ -33,14 +35,18 @@
             width: 36px;
             height: 36px;
             line-height: 36px;
-            margin-right: 20px;
         }
         .right-content {
-            margin-top: 4px;
-            float: right;
-            .mdi {
-                margin-right: 0;
-            }
+            @include displayFlex();
+            min-width: 56px;
+        }
+        .content {
+            @include flex(1);
+            @include displayFlex();
+        }
+        .left-content {
+            @include displayFlex();
+            min-width: 56px;
         }
     }
     &.not-auto-dense {
