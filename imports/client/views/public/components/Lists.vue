@@ -107,6 +107,78 @@
                             </span>
                         </list-item>
                     </list> 
+                    <list class="hover">
+                        <list-item>
+                            Two-line item
+                            <div class="list-caption">Secondary Text</div>
+                        </list-item>
+                    </list>
+                    <list class="hover">
+                        <list-item>
+                            <span slot="left">
+                                <icon name="solid"></icon>
+                            </span>
+                            Two-line item
+                            <div class="list-caption">Secondary Text</div>
+                        </list-item>
+                    </list>
+                    <list class="hover">
+                        <list-item>
+                            <span slot="left">
+                                <avatar text="Nizul Zaim"></avatar>
+                            </span>
+                            Two-line item
+                            <div class="list-caption">Secondary Text</div>
+                        </list-item>
+                    </list>
+                    <list class="hover">
+                        <list-item>
+                            <span slot="left">
+                                <avatar text="Nizul Zaim"></avatar>
+                            </span>
+                            Two-line item
+                            <div class="list-caption">Secondary Text</div>
+                            <span slot="right">
+                                <icon name="solid"></icon>
+                            </span>
+                        </list-item>
+                    </list>
+                    <list class="hover">
+                        <list-item>
+                            Three-line item
+                            <div class="list-caption">Secondary Text<br>Secondary Text</div>
+                        </list-item>
+                    </list>
+                    <list class="hover">
+                        <list-item>
+                            <span slot="left">
+                                <icon name="solid"></icon>
+                            </span>
+                            Three-line item
+                            <div class="list-caption">Secondary Text<br>Secondary Text</div>
+                        </list-item>
+                    </list>
+                    <list class="hover">
+                        <list-item>
+                            <span slot="left">
+                                <avatar text="Nizul Zaim"></avatar>
+                            </span>
+                            Three-line item
+                            <div class="list-caption">Secondary Text<br>Secondary Text</div>
+                        </list-item>
+                    </list>
+                    <list class="hover">
+                        <list-item>
+                            <span slot="left">
+                                <avatar text="Nizul Zaim"></avatar>
+                            </span>
+                            Three-line item
+                            <div class="list-caption">Secondary Text<br>Secondary Text</div>
+                            <span slot="right">
+                                <icon name="solid"></icon>
+                            </span>
+                        </list-item>
+                    </list>
                 </tab-content-item>
                 <tab-content-item>
                     <div style="height:4000px;">DIV</div>

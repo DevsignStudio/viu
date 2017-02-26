@@ -1,8 +1,8 @@
 @mixin notDense() {
     .viu-list-item {
-        padding: 8px 16px;
         font-size: 16px;
         line-height: 32px;
+        padding: 6px 16px;
         .peper-avatar {
             display: inline-block;
             vertical-align: middle;
@@ -10,6 +10,21 @@
             height: 40px;
             line-height: 40px;
             margin-right: 16px;
+        }
+        .right-content {
+            padding: 2px 0;
+        }
+        .content {
+            line-height: 20px;
+            padding: 12px 0;
+        }
+        .left-content {
+            padding: 2px 0;
+        }
+        .list-caption {
+            font-size: 14px;
+            line-height: 16px;
+            color: $color-grey-600;
         }
     }
 }
@@ -19,7 +34,7 @@
     .viu-list-item {
         width: 100%;
         line-height: 28px;
-        padding: 6px 16px;
+        padding: 4px 16px;
         font-size: 13px;
         cursor: default;
         @include transition(all 0.2s $sharpCurve);
@@ -28,6 +43,7 @@
         align-items: center;
         .mdi {
             color: $color-grey-700;
+            margin-right: 32px;
         }
         .peper-avatar {
             display: inline-block;
@@ -35,18 +51,28 @@
             width: 36px;
             height: 36px;
             line-height: 36px;
+            margin-right: 20px;
         }
         .right-content {
             @include displayFlex();
-            min-width: 56px;
+            padding: 2px 0;
         }
         .content {
             @include flex(1);
             @include displayFlex();
+            line-height: 20px;
+            padding: 8px 0;
         }
         .left-content {
             @include displayFlex();
-            min-width: 56px;
+            padding: 2px 0;
+        }
+        .list-caption {
+            display: block;
+            width: 100%;
+            font-size: 13px;
+            line-height: 16px;
+            color: $color-grey-600;
         }
     }
     &.not-auto-dense {

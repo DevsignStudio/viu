@@ -3809,7 +3809,7 @@ a.color-button {
   .viu-list .viu-list-item {
     width: 100%;
     line-height: 28px;
-    padding: 6px 16px;
+    padding: 4px 16px;
     font-size: 13px;
     cursor: default;
     -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.6, 1);
@@ -3825,20 +3825,22 @@ a.color-button {
     justify-content: center;
     align-items: center; }
     .viu-list .viu-list-item .mdi {
-      color: #616161; }
+      color: #616161;
+      margin-right: 32px; }
     .viu-list .viu-list-item .peper-avatar {
       display: inline-block;
       vertical-align: middle;
       width: 36px;
       height: 36px;
-      line-height: 36px; }
+      line-height: 36px;
+      margin-right: 20px; }
     .viu-list .viu-list-item .right-content {
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex;
-      min-width: 56px; }
+      padding: 2px 0; }
     .viu-list .viu-list-item .content {
       -webkit-box-flex: 1;
       -moz-box-flex: 1;
@@ -3849,18 +3851,26 @@ a.color-button {
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
-      display: flex; }
+      display: flex;
+      line-height: 20px;
+      padding: 8px 0; }
     .viu-list .viu-list-item .left-content {
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex;
-      min-width: 56px; }
+      padding: 2px 0; }
+    .viu-list .viu-list-item .list-caption {
+      display: block;
+      width: 100%;
+      font-size: 13px;
+      line-height: 16px;
+      color: #757575; }
   .viu-list.not-auto-dense .viu-list-item {
-    padding: 8px 16px;
     font-size: 16px;
-    line-height: 32px; }
+    line-height: 32px;
+    padding: 6px 16px; }
     .viu-list.not-auto-dense .viu-list-item .peper-avatar {
       display: inline-block;
       vertical-align: middle;
@@ -3868,20 +3878,42 @@ a.color-button {
       height: 40px;
       line-height: 40px;
       margin-right: 16px; }
+    .viu-list.not-auto-dense .viu-list-item .right-content {
+      padding: 2px 0; }
+    .viu-list.not-auto-dense .viu-list-item .content {
+      line-height: 20px;
+      padding: 12px 0; }
+    .viu-list.not-auto-dense .viu-list-item .left-content {
+      padding: 2px 0; }
+    .viu-list.not-auto-dense .viu-list-item .list-caption {
+      font-size: 14px;
+      line-height: 16px;
+      color: #757575; }
   @media (min-width: 768px) {
     .viu-list {
       padding-top: 8px; }
       .viu-list .viu-list-item {
-        padding: 8px 16px;
         font-size: 16px;
-        line-height: 32px; }
+        line-height: 32px;
+        padding: 6px 16px; }
         .viu-list .viu-list-item .peper-avatar {
           display: inline-block;
           vertical-align: middle;
           width: 40px;
           height: 40px;
           line-height: 40px;
-          margin-right: 16px; } }
+          margin-right: 16px; }
+        .viu-list .viu-list-item .right-content {
+          padding: 2px 0; }
+        .viu-list .viu-list-item .content {
+          line-height: 20px;
+          padding: 12px 0; }
+        .viu-list .viu-list-item .left-content {
+          padding: 2px 0; }
+        .viu-list .viu-list-item .list-caption {
+          font-size: 14px;
+          line-height: 16px;
+          color: #757575; } }
   .viu-list.hover .viu-list-item:hover {
     background-color: rgba(0, 0, 0, 0.1); }
 
