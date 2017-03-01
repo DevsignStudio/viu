@@ -1,11 +1,12 @@
-.peper-switches {
+$var: ".peper-switches";
+#{$var} {
     height: 48px;
     width: 48px;
     margin-left: 7px;
     margin-right: 7px;
     cursor: pointer;
     display: inline-block;
-    &-track {
+    #{$var}-track {
         width: 34px;
         height: 14px;
         position: absolute;
@@ -15,7 +16,7 @@
         background: rgba($color-black, 0.38);
         @include transition(all 0.15s $decelerationCurve);
     }
-    &-thumb {
+    #{$var}-thumb {
         width: 20px;
         height: 20px;
         top: 14px;
@@ -26,7 +27,7 @@
         @include box-shadow($z1-shadow);
         @include transition(all 0.15s $decelerationCurve);
     }
-    &-ripple {
+    #{$var}-ripple {
         width: 40px;
         height: 40px;
         @include border-radius(50%);
@@ -42,90 +43,26 @@
     }
     input[type="checkbox"] {
         display: none;
-        &:checked~.peper-switches-track {
+        &:checked~#{$var}-track {
             background-color: rgba($theme-primary, 0.5);
         }
-        &:checked~.peper-switches-thumb {
+        &:checked~#{$var}-thumb {
             @include transform(translateX(14px) translateZ(0));
             background-color: $theme-primary;
         }
-        &:checked~.peper-switches-ripple {
+        &:checked~#{$var}-ripple {
             @include transform(translateX(14px) translateZ(0));
             background-color: rgba($theme-primary, 0.2);
         }
     }
-    &.accent {
-        input[type="checkbox"] {
-            &:checked~.peper-switches-track {
-                background-color: rgba($theme-accent, 0.5);
-            }
-            &:checked~.peper-switches-thumb {
-                background-color: $theme-accent;
-            }
-            &:checked~.peper-switches-ripple {
-                background-color: rgba($theme-accent, 0.2);
-            }
-        }
-    }
-    &.green {
-        input[type="checkbox"] {
-            &:checked~.peper-switches-track {
-                background-color: rgba($color-green, 0.5);
-            }
-            &:checked~.peper-switches-thumb {
-                background-color: $color-green;
-            }
-            &:checked~.peper-switches-ripple {
-                background-color: rgba($color-green, 0.2);
-            }
-        }
-    }
-    &.yellow {
-        input[type="checkbox"] {
-            &:checked~.peper-switches-track {
-                background-color: rgba($color-amber, 0.5);
-            }
-            &:checked~.peper-switches-thumb {
-                background-color: $color-amber;
-            }
-            &:checked~.peper-switches-ripple {
-                background-color: rgba($color-amber, 0.2);
-            }
-        }
-    }
-    &.red {
-        input[type="checkbox"] {
-            &:checked~.peper-switches-track {
-                background-color: rgba($color-red, 0.5);
-            }
-            &:checked~.peper-switches-thumb {
-                background-color: $color-red;
-            }
-            &:checked~.peper-switches-ripple {
-                background-color: rgba($color-red, 0.2);
-            }
-        }
-    }
-    &.blue {
-        input[type="checkbox"] {
-            &:checked~.peper-switches-track {
-                background-color: rgba($color-blue, 0.5);
-            }
-            &:checked~.peper-switches-thumb {
-                background-color: $color-blue;
-            }
-            &:checked~.peper-switches-ripple {
-                background-color: rgba($color-blue, 0.2);
-            }
-        }
-    }
+    @include generateCreateSwitches($var);
     input[type="checkbox"]:disabled,
     input[type="checkbox"]:checked:disabled {
         pointer-events: none;
-        &~.peper-switches-track {
+        &~#{$var}-track {
             background-color: rgba($color-black, 0.12);
         }
-        &~.peper-switches-thumb {
+        &~#{$var}-thumb {
             background-color: rgba($color-grey-400, 1);
         }
     }

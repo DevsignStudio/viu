@@ -1,27 +1,28 @@
-.viu-radio {
+$var: ".viu-radio";
+#{$var} {
     height: 48px;
     width: 48px;
     cursor: pointer;
     display: inline-block;
-    &-check,
-    &-uncheck {
+    #{$var}-check,
+    #{$var}-uncheck {
         width: 24px;
         height: 24px;
         position: absolute;
         top: 12px;
         left: 12px;
     }
-    &-check {
+    #{$var}-check {
         color: $theme-primary;
         @include transform(scale(0));
         @include transition((all 0.2s $sharpCurve, opacity 0.25s $decelerationCurve));
         opacity: 0;
     }
-    &-uncheck {
+    #{$var}-uncheck {
         color: rgba($color-black, 0.54);
         @include transition((opacity 0.25s $accelerationCurve));
     }
-    &-ripple {
+    #{$var}-ripple {
         width: 48px;
         height: 48px;
         @include border-radius(50%);
@@ -37,23 +38,24 @@
     }
     input[type="radio"] {
         display: none;
-        &:checked~.viu-radio-check {
+        &:checked~#{$var}-check {
             @include transform(scale(1));
             opacity: 1;
         }
-        &:checked~.viu-radio-uncheck {
+        &:checked~#{$var}-uncheck {
             opacity: 0;
         }
-        &:checked~.viu-radio-ripple {
+        &:checked~#{$var}-ripple {
             background-color: rgba($theme-primary, 0.2);
         }
     }
     input[type="radio"]:disabled,
     input[type="radio"]:checked:disabled {
         pointer-events: none;
-        &~.viu-radio-check,
-        &~.viu-radio-uncheck{
+        &~#{$var}-check,
+        &~#{$var}-uncheck {
             color: rgba($color-black, 0.26);
         }
     }
+    @include generateCreateRadio($var);
 }

@@ -586,3 +586,103 @@ $raised-button-pressed-shadow: 0 6px 5px rgba(#000, 0.09),
     -ms-flex: $var;
     flex: $var;
 }
+
+$colorCodeSet: $theme-primary,
+$theme-accent,
+$color-red,
+$color-pink,
+$color-purple,
+$color-deep-purple,
+$color-indigo,
+$color-blue,
+$color-light-blue,
+$color-cyan,
+$color-teal,
+$color-green,
+$color-light-green,
+$color-lime,
+$color-yellow,
+$color-amber,
+$color-orange,
+$color-deep-orange,
+$color-brown,
+$color-blue-grey;
+$colorNameSet: "primary",
+"accent",
+"red",
+"pink",
+"purple",
+"deep-purple",
+"indigo",
+"blue",
+"light-blue",
+"cyan",
+"teal",
+"green",
+"light-green",
+"lime",
+"yellow",
+"amber",
+"orange",
+"deep-orange",
+"brown",
+"blue-grey";
+@mixin createCheckbox($className, $colorName, $colorCode) {
+    &.#{$colorName} {
+        #{$className}-check {
+            color: $colorCode;
+        }
+        input[type="checkbox"] {
+            &:checked~#{$className}-ripple {
+                background-color: rgba($colorCode, 0.2);
+            }
+        }
+    }
+}
+
+@mixin createSwitches($className, $colorName, $colorCode) {
+    &.#{$colorName} {
+        input[type="checkbox"] {
+            &:checked~#{$className}-track {
+                background-color: rgba($colorCode, 0.5);
+            }
+            &:checked~#{$className}-thumb {
+                background-color: $colorCode;
+            }
+            &:checked~#{$className}-ripple {
+                background-color: rgba($colorCode, 0.2);
+            }
+        }
+    }
+}
+
+@mixin createRadio($className, $colorName, $colorCode) {
+    &.#{$colorName} {
+        #{$className}-check {
+            color: $colorCode;
+        }
+        input[type="radio"] {
+            &:checked~#{$className}-ripple {
+                background-color: rgba($colorCode, 0.2);
+            }
+        }
+    }
+}
+
+@mixin generateCreateCheckbox($className) {
+    @for $i from 1 to length($colorNameSet) {
+        @include createCheckbox($className, nth($colorNameSet, $i), nth($colorCodeSet, $i));
+    }
+}
+
+@mixin generateCreateSwitches($className) {
+    @for $i from 1 to length($colorNameSet) {
+        @include createSwitches($className, nth($colorNameSet, $i), nth($colorCodeSet, $i));
+    }
+}
+
+@mixin generateCreateRadio($className) {
+    @for $i from 1 to length($colorNameSet) {
+        @include createRadio($className, nth($colorNameSet, $i), nth($colorCodeSet, $i));
+    }
+}
