@@ -5,7 +5,7 @@ $var: ".peper-switches";
     margin-left: 7px;
     margin-right: 7px;
     cursor: pointer;
-    display: inline-block;
+    float: left;
     #{$var}-track {
         width: 34px;
         height: 14px;

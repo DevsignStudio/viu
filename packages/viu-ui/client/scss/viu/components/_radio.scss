@@ -3,7 +3,7 @@ $var: ".viu-radio";
     height: 48px;
     width: 48px;
     cursor: pointer;
-    display: inline-block;
+    float: left;
     #{$var}-check,
     #{$var}-uncheck {
         width: 24px;
