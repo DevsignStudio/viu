@@ -5,6 +5,7 @@ import Index from '/imports/client/views/public/Index.vue';
 import Lists from '/imports/client/views/public/components/Lists.vue';
 import SelectionControl from '/imports/client/views/public/components/SelectionControl.vue';
 import Accordions from '/imports/client/views/public/components/Accordions.vue';
+import ComponentCards from '/imports/client/views/public/components/Card.vue';
 
 Router.configure(router => {
     router.addRoutes([{
@@ -40,6 +41,15 @@ Router.configure(router => {
         meta: { fixToolbar: true, pageTitle: "Accordions" },
         components: {
             default: Accordions,
+            toolbar: Toolbar,
+            navigation: Navigation,
+        }
+    }, {
+        path: "/components/cards",
+        name: "Cards",
+        meta: { fixToolbar: true, pageTitle: "Cards" },
+        components: {
+            default: ComponentCards,
             toolbar: Toolbar,
             navigation: Navigation,
         }
