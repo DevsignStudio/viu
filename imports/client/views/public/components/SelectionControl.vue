@@ -7,9 +7,9 @@
             </tab>
             <tab-content element="#tab" :size="2">
                 <tab-content-item>
-                    <div>
+                    <clearfix>
                         <checkbox name="checkboxTest" v-model="checkboxData"></checkbox>
-                        <checkbox name="checkboxTest" v-model="checkboxData" class="accent"></checkbox>
+                        <checkbox name="checkboxTest" v-model="checkboxDataFalse" class="accent"></checkbox>
                         <checkbox name="checkboxTest" v-model="checkboxData" class="green"></checkbox>
                         <checkbox name="checkboxTest" v-model="checkboxData" class="red"></checkbox>
                         <checkbox name="checkboxTest" v-model="checkboxData" class="pink"></checkbox>
@@ -28,8 +28,8 @@
                         <checkbox name="checkboxTest" v-model="checkboxData" class="brown"></checkbox>
                         <checkbox name="checkboxTest" v-model="checkboxData" class="blue-grey"></checkbox>
                         <checkbox name="checkboxTest" v-model="checkboxData" disabled></checkbox>
-                    </div>
-                    <div>
+                    </clearfix>
+                    <clearfix>
                         <radio name="radioTest" v-model="radioData"></radio>
                         <radio name="radioTest" v-model="radioData" class="accent"></radio>
                         <radio name="radioTest" v-model="radioData" class="green"></radio>
@@ -50,32 +50,45 @@
                         <radio name="radioTest" v-model="radioData" class="brown"></radio>
                         <radio name="radioTest" v-model="radioData" class="blue-grey"></radio>
                         <radio name="radioTest" v-model="radioData" disabled></radio>
-                    </div>
-                    <div>
-                        <switches name="switchTest" v-model="swicthData"></switches>
-                        <switches name="switchTest" v-model="swicthData" class="accent"></switches>
-                        <switches name="switchTest" v-model="swicthData" class="green"></switches>
-                        <switches name="switchTest" v-model="swicthData" class="red"></switches>
-                        <switches name="switchTest" v-model="swicthData" class="pink"></switches>
-                        <switches name="switchTest" v-model="swicthData" class="blue"></switches>
-                        <switches name="switchTest" v-model="swicthData" class="indigo"></switches>
-                        <switches name="switchTest" v-model="swicthData" class="teal"></switches>
-                        <switches name="switchTest" v-model="swicthData" class="amber"></switches>
-                        <switches name="switchTest" v-model="swicthData" class="orange"></switches>
-                        <switches name="switchTest" v-model="swicthData" class="deep-orange"></switches>
-                        <switches name="switchTest" v-model="swicthData" class="deep-purple"></switches>
-                        <switches name="switchTest" v-model="swicthData" class="light-blue"></switches>
-                        <switches name="switchTest" v-model="swicthData" class="cyan"></switches>
-                        <switches name="switchTest" v-model="swicthData" class="light-green"></switches>
-                        <switches name="switchTest" v-model="swicthData" class="lime"></switches>
-                        <switches name="switchTest" v-model="swicthData" class="yellow"></switches>
-                        <switches name="switchTest" v-model="swicthData" class="brown"></switches>
-                        <switches name="switchTest" v-model="swicthData" class="blue-grey"></switches>
-                        <switches name="switchTest" v-model="swicthData" disabled></switches>
-                    </div>
+                    </clearfix>
+                    <clearfix>
+                        <switches name="switchTest" v-model="switchData"></switches>
+                        <switches name="switchTest" v-model="switchData" class="accent"></switches>
+                        <switches name="switchTest" v-model="switchData" class="green"></switches>
+                        <switches name="switchTest" v-model="switchData" class="red"></switches>
+                        <switches name="switchTest" v-model="switchData" class="pink"></switches>
+                        <switches name="switchTest" v-model="switchData" class="blue"></switches>
+                        <switches name="switchTest" v-model="switchData" class="indigo"></switches>
+                        <switches name="switchTest" v-model="switchData" class="teal"></switches>
+                        <switches name="switchTest" v-model="switchData" class="amber"></switches>
+                        <switches name="switchTest" v-model="switchData" class="orange"></switches>
+                        <switches name="switchTest" v-model="switchData" class="deep-orange"></switches>
+                        <switches name="switchTest" v-model="switchData" class="deep-purple"></switches>
+                        <switches name="switchTest" v-model="switchData" class="light-blue"></switches>
+                        <switches name="switchTest" v-model="switchData" class="cyan"></switches>
+                        <switches name="switchTest" v-model="switchData" class="light-green"></switches>
+                        <switches name="switchTest" v-model="switchData" class="lime"></switches>
+                        <switches name="switchTest" v-model="switchData" class="yellow"></switches>
+                        <switches name="switchTest" v-model="switchData" class="brown"></switches>
+                        <switches name="switchTest" v-model="switchData" class="blue-grey"></switches>
+                        <switches name="switchTest" v-model="switchData" disabled></switches>
+                    </clearfix>
                 </tab-content-item>
                 <tab-content-item>
-                
+                    <div style="padding: 16px;">
+                        <clearfix>
+                            <div class="font-title">Example #1</div>
+                            <highlight-code lang="html">{{code1}}</highlight-code>
+                        </clearfix>
+                        <clearfix>
+                            <div class="font-title">Example #2</div>
+                            <highlight-code lang="html">{{code2}}</highlight-code>
+                        </clearfix>
+                        <clearfix>
+                            <div class="font-title">Example #3</div>
+                            <highlight-code lang="html">{{code3}}</highlight-code>
+                        </clearfix>
+                    </div>
                 </tab-content-item>
             </tab-content>
         </div>
@@ -86,9 +99,100 @@
     export default {
         data() {
             return {
-                checkboxData: "",
-                swicthData: "",
+                checkboxData: true,
+                checkboxDataFalse: false,
+                switchData: "",
                 radioData: "",
+                code1: `<checkbox name="checkboxTest" v-model="checkboxData"></checkbox>
+<checkbox name="checkboxTest" v-model="checkboxDataFalse" class="accent"></checkbox>
+<checkbox name="checkboxTest" v-model="checkboxData" class="green"></checkbox>
+<checkbox name="checkboxTest" v-model="checkboxData" class="red"></checkbox>
+<checkbox name="checkboxTest" v-model="checkboxData" class="pink"></checkbox>
+<checkbox name="checkboxTest" v-model="checkboxData" class="blue"></checkbox>
+<checkbox name="checkboxTest" v-model="checkboxData" class="indigo"></checkbox>
+<checkbox name="checkboxTest" v-model="checkboxData" class="teal"></checkbox>
+<checkbox name="checkboxTest" v-model="checkboxData" class="amber"></checkbox>
+<checkbox name="checkboxTest" v-model="checkboxData" class="orange"></checkbox>
+<checkbox name="checkboxTest" v-model="checkboxData" class="deep-orange"></checkbox>
+<checkbox name="checkboxTest" v-model="checkboxData" class="deep-purple"></checkbox>
+<checkbox name="checkboxTest" v-model="checkboxData" class="light-blue"></checkbox>
+<checkbox name="checkboxTest" v-model="checkboxData" class="cyan"></checkbox>
+<checkbox name="checkboxTest" v-model="checkboxData" class="light-green"></checkbox>
+<checkbox name="checkboxTest" v-model="checkboxData" class="lime"></checkbox>
+<checkbox name="checkboxTest" v-model="checkboxData" class="yellow"></checkbox>
+<checkbox name="checkboxTest" v-model="checkboxData" class="brown"></checkbox>
+<checkbox name="checkboxTest" v-model="checkboxData" class="blue-grey"></checkbox>
+<checkbox name="checkboxTest" v-model="checkboxData" disabled></checkbox>
+
+<script>
+    export default {
+        data() {
+            return {
+                checkboxData: true,
+                checkboxDataFalse: false,
+            }
+        }
+    }
+</script>
+`,
+                code2: `<radio name="radioTest" v-model="radioData"></radio>
+<radio name="radioTest" v-model="radioData" class="accent"></radio>
+<radio name="radioTest" v-model="radioData" class="green"></radio>
+<radio name="radioTest" v-model="radioData" class="red"></radio>
+<radio name="radioTest" v-model="radioData" class="pink"></radio>
+<radio name="radioTest" v-model="radioData" class="blue"></radio>
+<radio name="radioTest" v-model="radioData" class="indigo"></radio>
+<radio name="radioTest" v-model="radioData" class="teal"></radio>
+<radio name="radioTest" v-model="radioData" class="amber"></radio>
+<radio name="radioTest" v-model="radioData" class="orange"></radio>
+<radio name="radioTest" v-model="radioData" class="deep-orange"></radio>
+<radio name="radioTest" v-model="radioData" class="deep-purple"></radio>
+<radio name="radioTest" v-model="radioData" class="light-blue"></radio>
+<radio name="radioTest" v-model="radioData" class="cyan"></radio>
+<radio name="radioTest" v-model="radioData" class="light-green"></radio>
+<radio name="radioTest" v-model="radioData" class="lime"></radio>
+<radio name="radioTest" v-model="radioData" class="yellow"></radio>
+<radio name="radioTest" v-model="radioData" class="brown"></radio>
+<radio name="radioTest" v-model="radioData" class="blue-grey"></radio>
+<radio name="radioTest" v-model="radioData" disabled></radio>
+<script>
+    export default {
+        data() {
+            return {
+                radioData: "",
+            }
+        }
+    }
+</script>`,
+                code3: `<switches name="switchTest" v-model="switchData"></switches>
+<switches name="switchTest" v-model="switchData" class="accent"></switches>
+<switches name="switchTest" v-model="switchData" class="green"></switches>
+<switches name="switchTest" v-model="switchData" class="red"></switches>
+<switches name="switchTest" v-model="switchData" class="pink"></switches>
+<switches name="switchTest" v-model="switchData" class="blue"></switches>
+<switches name="switchTest" v-model="switchData" class="indigo"></switches>
+<switches name="switchTest" v-model="switchData" class="teal"></switches>
+<switches name="switchTest" v-model="switchData" class="amber"></switches>
+<switches name="switchTest" v-model="switchData" class="orange"></switches>
+<switches name="switchTest" v-model="switchData" class="deep-orange"></switches>
+<switches name="switchTest" v-model="switchData" class="deep-purple"></switches>
+<switches name="switchTest" v-model="switchData" class="light-blue"></switches>
+<switches name="switchTest" v-model="switchData" class="cyan"></switches>
+<switches name="switchTest" v-model="switchData" class="light-green"></switches>
+<switches name="switchTest" v-model="switchData" class="lime"></switches>
+<switches name="switchTest" v-model="switchData" class="yellow"></switches>
+<switches name="switchTest" v-model="switchData" class="brown"></switches>
+<switches name="switchTest" v-model="switchData" class="blue-grey"></switches>
+<switches name="switchTest" v-model="switchData" disabled></switches>
+<script>
+    export default {
+        data() {
+            return {
+                switchData: "",
+            }
+        }
+    }
+</script>`,
             }
         }
     }

@@ -2575,7 +2575,12 @@ section {
     transform: scale(0); }
   100% {
     transform: scale(1.5); } }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0; }
 
 h1 {
@@ -2618,13 +2623,15 @@ p {
   margin: 0;
   margin-bottom: 20px; }
 
-pre, code {
+pre,
+code {
   color: #000;
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 14px;
   /* 0.94 = 0.88 + (1.00 - 0.88) / 2 */
   background-color: #eeeeee; }
-  pre span, code span {
+  pre span,
+  code span {
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 14px; }
 
@@ -2632,14 +2639,24 @@ pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
-  padding: 12px; }
+  padding: 0px;
+  margin: 0;
+  margin-bottom: 12px; }
   pre code {
     border: 0px !important;
-    background: transparent !important;
     line-height: 1.3em; }
-
-code {
-  padding: 0 8px 0 8px; }
+    pre code::selection,
+    pre code *::selection {
+      background: #2196f3;
+      color: white; }
+  pre,
+  pre * {
+    -webkit-touch-callout: initial;
+    -webkit-user-select: initial;
+    -khtml-user-select: initial;
+    -moz-user-select: initial;
+    -ms-user-select: initial;
+    user-select: initial; }
 
 hr {
   display: block;
@@ -2662,7 +2679,8 @@ blockquote {
   blockquote p {
     font-style: italic; }
 
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -2673,7 +2691,8 @@ sup {
   background: #fff;
   bottom: -0.25em; }
 
-ul, ol {
+ul,
+ol {
   margin: 1em 0;
   padding: 0 0 0 2em; }
 
@@ -3646,7 +3665,7 @@ a.color-button {
   height: 48px;
   width: 48px;
   cursor: pointer;
-  display: inline-block; }
+  float: left; }
   .viu-checkbox .viu-checkbox-check,
   .viu-checkbox .viu-checkbox-uncheck {
     width: 24px;
@@ -4145,7 +4164,7 @@ a.color-button {
   margin-left: 7px;
   margin-right: 7px;
   cursor: pointer;
-  display: inline-block; }
+  float: left; }
   .peper-switches .peper-switches-track {
     width: 34px;
     height: 14px;
@@ -4513,7 +4532,7 @@ a.color-button {
   height: 48px;
   width: 48px;
   cursor: pointer;
-  display: inline-block; }
+  float: left; }
   .viu-radio .viu-radio-check,
   .viu-radio .viu-radio-uncheck {
     width: 24px;

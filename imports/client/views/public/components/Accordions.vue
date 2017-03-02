@@ -21,9 +21,33 @@
                     </div>
                 </tab-content-item>
                 <tab-content-item>
-                    <div style="height:4000px;">DIV</div>
+                    <div style="padding: 16px;">
+                        <clearfix>
+                            <div class="font-title">Example #1</div>
+                            <highlight-code lang="html">{{code1}}</highlight-code>
+                        </clearfix>
+                    </div>
                 </tab-content-item>
             </tab-content>
         </div>
     </div>
 </template>
+
+<script>
+    export default {
+        data() {
+            return {
+                code1: `<accordion :collapsible="true">
+    <accordion-item>
+        <accordion-item-header>Header</accordion-item-header>
+        <accordion-item-content>Content</accordion-item-content>
+    </accordion-item>
+    <accordion-item>
+        <accordion-item-header>Header</accordion-item-header>
+        <accordion-item-content>Content</accordion-item-content>
+    </accordion-item>
+</accordion>`,
+            }
+        }
+    }
+</script>
