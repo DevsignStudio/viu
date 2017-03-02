@@ -17,6 +17,9 @@
                     <nav-list to="/components/selection-control" class="nav-item">
                         <icon name="paper-cut-vertical"></icon> Selection Control
                     </nav-list>
+                    <nav-list to="/components/cards" class="nav-item">
+                        <icon name="paper-cut-vertical"></icon> Cards
+                    </nav-list>
                 </span>
             </nav-list>
         </scroll-bar>
