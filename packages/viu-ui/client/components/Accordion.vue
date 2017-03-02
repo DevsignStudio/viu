@@ -5,8 +5,8 @@
 </template>
 
 <script>
-    import 'mobify-plugin/dist/plugin.min'
-    import 'velocity-animate/velocity'
+    import 'mobify-plugin/dist/plugin.min';
+    import 'velocity-animate/velocity';
     import 'bellows-ui';
     import 'bellows-ui/dist/bellows.css';
 

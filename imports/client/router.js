@@ -3,6 +3,8 @@ import Toolbar from '/imports/client/views/templates/toolbar/Toolbar.vue';
 import Navigation from '/imports/client/views/templates/navigation/Navigation.vue';
 import Index from '/imports/client/views/public/Index.vue';
 import Lists from '/imports/client/views/public/components/Lists.vue';
+import SelectionControl from '/imports/client/views/public/components/SelectionControl.vue';
+import Accordions from '/imports/client/views/public/components/Accordions.vue';
 
 Router.configure(router => {
     router.addRoutes([{
@@ -20,6 +22,24 @@ Router.configure(router => {
         meta: { fixToolbar: true, pageTitle: "Lists" },
         components: {
             default: Lists,
+            toolbar: Toolbar,
+            navigation: Navigation,
+        }
+    }, {
+        path: "/components/selection-control",
+        name: "SelectionCOntrol",
+        meta: { fixToolbar: true, pageTitle: "Selection Control" },
+        components: {
+            default: SelectionControl,
+            toolbar: Toolbar,
+            navigation: Navigation,
+        }
+    }, {
+        path: "/components/accordion",
+        name: "Accordions",
+        meta: { fixToolbar: true, pageTitle: "Accordions" },
+        components: {
+            default: Accordions,
             toolbar: Toolbar,
             navigation: Navigation,
         }
