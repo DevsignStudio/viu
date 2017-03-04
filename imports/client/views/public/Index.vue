@@ -133,6 +133,8 @@
             headerTest(id, order) {
                 console.log(id, order);
             }
+        },
+        mounted() {
         }
     }
 </script>

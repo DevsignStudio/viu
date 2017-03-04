@@ -7,11 +7,10 @@
                     <span>
                         <router-view name="toolbar"></router-view>
                         <router-view ></router-view>
-                        <confirmation-dialog id="confirmationDialogforPlugin">
-                        </confirmation-dialog>
                     </span>
                 </scroll-bar>
             </div>
         </div>
+        <confirmation-dialog></confirmation-dialog>
     </div>
 </template>

@@ -7,6 +7,10 @@ import SelectionControl from '/imports/client/views/public/components/SelectionC
 import Accordions from '/imports/client/views/public/components/Accordions.vue';
 import ComponentCards from '/imports/client/views/public/components/Card.vue';
 import ComponentButton from '/imports/client/views/public/components/Buttons.vue';
+import ComponentTooltips from '/imports/client/views/public/components/Tooltips.vue';
+import ComponentSnackbar from '/imports/client/views/public/components/Snackbar.vue';
+import ComponentConfirmation from '/imports/client/views/public/components/Confirmation.vue';
+import ComponentMenu from '/imports/client/views/public/components/Menu.vue';
 
 Router.configure(router => {
     router.addRoutes([{
@@ -63,5 +67,41 @@ Router.configure(router => {
             toolbar: Toolbar,
             navigation: Navigation,
         }
-    }, ]);
+    }, {
+        path: "/components/tooltips",
+        name: "Tooltips",
+        meta: { fixToolbar: true, pageTitle: "Tooltips" },
+        components: {
+            default: ComponentTooltips,
+            toolbar: Toolbar,
+            navigation: Navigation,
+        }
+    },  {
+        path: "/components/snackbar",
+        name: "Snackbar",
+        meta: { fixToolbar: true, pageTitle: "Snackbar" },
+        components: {
+            default: ComponentSnackbar,
+            toolbar: Toolbar,
+            navigation: Navigation,
+        }
+    },{
+        path: "/components/confirmation",
+        name: "Confirmation",
+        meta: { fixToolbar: true, pageTitle: "Confirmation" },
+        components: {
+            default: ComponentConfirmation,
+            toolbar: Toolbar,
+            navigation: Navigation,
+        }
+    },{
+        path: "/components/menu",
+        name: "Menu",
+        meta: { fixToolbar: true, pageTitle: "Menu" },
+        components: {
+            default: ComponentMenu,
+            toolbar: Toolbar,
+            navigation: Navigation,
+        }
+    },]);
 });
