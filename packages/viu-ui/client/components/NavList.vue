@@ -65,10 +65,10 @@ export default {
                 });
 
             } else {
-                $el.on("click", function() {
-                    $el.parents(".viu-side-navigation").removeClass('open');
+                $el.on("click", function(e) {
+                    e.preventDefault();
                     self.$emit("click");
-                })
+                });
             }
         })
     }

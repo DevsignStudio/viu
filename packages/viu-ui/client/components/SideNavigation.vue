@@ -5,6 +5,7 @@
 </template>
 
 <script>
+    import Helper from "../plugin/class.js"
     export default {
         props: {
             isFixLg: {
@@ -29,6 +30,14 @@
                 $el.on("click", function() {
                     $selfEl.removeClass("open");
                 });
+            })
+
+            self.$router.beforeEach((to, from, next) => {
+                Helper.removeClass(self.$el, "open");
+                console.log("only one")
+                setTimeout(()=>{
+                    next();
+                }, 400)
             })
             
         }
