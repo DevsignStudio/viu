@@ -1,9 +1,6 @@
 node_modules/
 .sass-cache/
-.deploy/mup.js
-.deploy/rsa
-.deploy/bundle.crt
-.deploy/private.key
+.deploy/
 .desktopTmp/
 .vscode/
 version.desktop
