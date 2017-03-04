@@ -7,7 +7,22 @@
             </tab>
             <tab-content element="#tab" :size="2">
                 <tab-content-item>
-                    <div>
+                    <div style="padding: 16px;">
+                        <div class="font-title">Example #1 - Multiple Open</div>
+                        <accordion>
+                            <accordion-item>
+                                <accordion-item-header>Header</accordion-item-header>
+                                <accordion-item-content>Content</accordion-item-content>
+                            </accordion-item>
+                            <accordion-item>
+                                <accordion-item-header>Header</accordion-item-header>
+                                <accordion-item-content>Content</accordion-item-content>
+                            </accordion-item>
+                        </accordion>
+                    </div>
+
+                    <div style="padding: 16px;">
+                        <div class="font-title">Example #2 - Single Open</div>
                         <accordion :collapsible="true">
                             <accordion-item>
                                 <accordion-item-header>Header</accordion-item-header>
@@ -23,8 +38,14 @@
                 <tab-content-item>
                     <div style="padding: 16px;">
                         <clearfix>
-                            <div class="font-title">Example #1</div>
+                            <div class="font-title">Example #1 - Multiple Open</div>
                             <highlight-code lang="html">{{code1}}</highlight-code>
+                        </clearfix>
+                    </div>
+                    <div style="padding: 16px;">
+                        <clearfix>
+                            <div class="font-title">Example #2 - Single Open</div>
+                            <highlight-code lang="html">{{code2}}</highlight-code>
                         </clearfix>
                     </div>
                 </tab-content-item>
@@ -37,7 +58,17 @@
     export default {
         data() {
             return {
-                code1: `<accordion :collapsible="true">
+                code1: `<accordion>
+    <accordion-item>
+        <accordion-item-header>Header</accordion-item-header>
+        <accordion-item-content>Content</accordion-item-content>
+    </accordion-item>
+    <accordion-item>
+        <accordion-item-header>Header</accordion-item-header>
+        <accordion-item-content>Content</accordion-item-content>
+    </accordion-item>
+</accordion>`,
+                code2: `<accordion :collapsible="true">
     <accordion-item>
         <accordion-item-header>Header</accordion-item-header>
         <accordion-item-content>Content</accordion-item-content>
