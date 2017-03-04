@@ -1,5 +1,5 @@
 <template>
-    <reveal  :disable-overlay="true" class="reveal">
+    <reveal id="confirmationDialogforPlugin" :disable-overlay="true" class="reveal">
         <div class="col-xd-6" style="padding: 0 8px;">
             <cards v-depth="3">
                 <cards-content class="profile">
