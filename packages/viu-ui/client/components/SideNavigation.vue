@@ -24,8 +24,11 @@
             let self = this;
             this.$nextTick(function() {
                 var $selfEl = $(self.$el);
-                var $el = $('<div class="viu-side-navigation-overlay"></div>');
-                $selfEl.after($el);
+                if($selfEl.next(".viu-side-navigation-overlay").length === 0) {
+                    var $el = $('<div class="viu-side-navigation-overlay"></div>');
+                    $selfEl.after($el);
+                }
+                
                 $el = $selfEl.next();
                 $el.on("click", function() {
                     $selfEl.removeClass("open");
@@ -33,11 +36,9 @@
             })
 
             self.$router.beforeEach((to, from, next) => {
-                Helper.removeClass(self.$el, "open");
-                console.log("only one")
                 setTimeout(()=>{
                     next();
-                }, 400)
+                }, 250)
             })
             
         }
