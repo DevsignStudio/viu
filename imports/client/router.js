@@ -1,6 +1,8 @@
 import { Router } from 'meteor/akryum:vue-router2';
 import Toolbar from '/imports/client/views/templates/toolbar/Toolbar.vue';
-import Navigation from '/imports/client/views/templates/navigation/Navigation.vue';
+import ToolbarNoBackground from '/imports/client/views/templates/toolbar/ToolbarNoBackground.vue';
+import IndexNavigation from '/imports/client/views/templates/navigation/IndexNavigation.vue';
+import GlobalNavigation from '/imports/client/views/templates/navigation/GlobalNavigation.vue';
 import Index from '/imports/client/views/public/Index.vue';
 import Lists from '/imports/client/views/public/components/Lists.vue';
 import SelectionControl from '/imports/client/views/public/components/SelectionControl.vue';
@@ -11,16 +13,17 @@ import ComponentTooltips from '/imports/client/views/public/components/Tooltips.
 import ComponentSnackbar from '/imports/client/views/public/components/Snackbar.vue';
 import ComponentConfirmation from '/imports/client/views/public/components/Confirmation.vue';
 import ComponentMenu from '/imports/client/views/public/components/Menu.vue';
+import TemplateSlider from '/imports/client/views/public/templates/Sliders.vue';
 
 Router.configure(router => {
     router.addRoutes([{
         path: "/",
         name: "Index",
-        meta: { fixToolbar: true, pageTitle: "Dashboard" },
+        meta: { fixToolbar: true, pageTitle: "Viu Doc" },
         components: {
             default: Index,
             toolbar: Toolbar,
-            navigation: Navigation,
+            navigation: IndexNavigation,
         }
     }, {
         path: "/components/lists",
@@ -29,7 +32,7 @@ Router.configure(router => {
         components: {
             default: Lists,
             toolbar: Toolbar,
-            navigation: Navigation,
+            navigation: GlobalNavigation,
         }
     }, {
         path: "/components/selection-control",
@@ -38,7 +41,7 @@ Router.configure(router => {
         components: {
             default: SelectionControl,
             toolbar: Toolbar,
-            navigation: Navigation,
+            navigation: GlobalNavigation,
         }
     }, {
         path: "/components/accordion",
@@ -47,7 +50,7 @@ Router.configure(router => {
         components: {
             default: Accordions,
             toolbar: Toolbar,
-            navigation: Navigation,
+            navigation: GlobalNavigation,
         }
     }, {
         path: "/components/cards",
@@ -56,7 +59,7 @@ Router.configure(router => {
         components: {
             default: ComponentCards,
             toolbar: Toolbar,
-            navigation: Navigation,
+            navigation: GlobalNavigation,
         }
     }, {
         path: "/components/buttons",
@@ -65,7 +68,7 @@ Router.configure(router => {
         components: {
             default: ComponentButton,
             toolbar: Toolbar,
-            navigation: Navigation,
+            navigation: GlobalNavigation,
         }
     }, {
         path: "/components/tooltips",
@@ -74,34 +77,43 @@ Router.configure(router => {
         components: {
             default: ComponentTooltips,
             toolbar: Toolbar,
-            navigation: Navigation,
+            navigation: GlobalNavigation,
         }
-    },  {
+    }, {
         path: "/components/snackbar",
         name: "Snackbar",
         meta: { fixToolbar: true, pageTitle: "Snackbar" },
         components: {
             default: ComponentSnackbar,
             toolbar: Toolbar,
-            navigation: Navigation,
+            navigation: GlobalNavigation,
         }
-    },{
+    }, {
         path: "/components/confirmation",
         name: "Confirmation",
         meta: { fixToolbar: true, pageTitle: "Confirmation" },
         components: {
             default: ComponentConfirmation,
             toolbar: Toolbar,
-            navigation: Navigation,
+            navigation: GlobalNavigation,
         }
-    },{
+    }, {
         path: "/components/menu",
         name: "Menu",
         meta: { fixToolbar: true, pageTitle: "Menu" },
         components: {
             default: ComponentMenu,
             toolbar: Toolbar,
-            navigation: Navigation,
+            navigation: GlobalNavigation,
         }
-    },]);
+    }, {
+        path: "/templates/sliders",
+        name: "Slider",
+        meta: { fixToolbar: true, pageTitle: "Slider" },
+        components: {
+            default: TemplateSlider,
+            toolbar: ToolbarNoBackground,
+            navigation: IndexNavigation,
+        }
+    }, ]);
 });
