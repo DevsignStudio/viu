@@ -1,17 +1,6 @@
 <template>
     <span>
-        <!--<toolbar :title="title" text-color="white" background-color="theme" :fix="true" v-depth="1">
-            <div slot="left">
-                <icon-button name="menu" v-ripple v-sidenav:click=""></icon-button>
-            </div>
-            <div slot="center">
-                <search-box v-model="value"></search-box>
-            </div>
-            <div slot="right">
-                <icon-button name="dots-vertical" v-ripple></icon-button>
-            </div>
-        </toolbar>-->
-        <app-bar :title="title" :fixed="true" background-color="theme" v-depth="0">
+        <app-bar :title="title" :fixed="true" background-color="transparent" :hex-background="true" v-depth="0">
             <div slot="left">
                 <icon-button name="menu" v-open v-ripple="{background: '#fff'}"></icon-button>
             </div>
