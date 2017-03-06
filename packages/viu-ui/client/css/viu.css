@@ -128,7 +128,7 @@ section {
   transform: translateY(-50%);
   position: absolute; }
 
-.middle-horizontal {
+.middle-horizontal, .viu-slider .slick-dots {
   left: 50%;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -4182,6 +4182,56 @@ a.color-button {
         fill: #2a56c6; }
     .viu-side-navigation .nav-item.router-link-active .ripple-circle {
       background: rgba(63, 81, 181, 0.2) !important; }
+
+.viu-slider {
+  background: transparent;
+  height: 100%; }
+  .viu-slider .viu-slider-item {
+    height: 100%; }
+  .viu-slider .slick-list,
+  .viu-slider .slick-track {
+    height: 100%; }
+  .viu-slider .slick-dots {
+    position: absolute;
+    bottom: 0;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    padding: 16px; }
+    .viu-slider .slick-dots li {
+      list-style: none;
+      float: left;
+      height: 12px;
+      line-height: 14px; }
+      .viu-slider .slick-dots li button {
+        margin: 0;
+        padding: 0;
+        margin-left: 6px;
+        margin-right: 6px;
+        width: 8px;
+        height: 8px;
+        color: transparent;
+        border-radius: 50%;
+        border: 4px solid #ffffff;
+        background: transparent;
+        cursor: pointer;
+        -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.6, 1);
+        -moz-transition: all 0.2s cubic-bezier(0.4, 0, 0.6, 1);
+        -ms-transition: all 0.2s cubic-bezier(0.4, 0, 0.6, 1);
+        -o-transition: all 0.2s cubic-bezier(0.4, 0, 0.6, 1);
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.6, 1); }
+      .viu-slider .slick-dots li.slick-active button {
+        border: 2px solid #ffffff;
+        margin-top: -2px;
+        width: 14px;
+        height: 14px; }
+  .viu-slider ~ .next-button {
+    position: absolute;
+    bottom: 0;
+    right: 4px; }
+
+.viu-slider-wrapper.inverse .slick-dots li button {
+  border-color: #000000; }
 
 .peper-switches {
   height: 48px;

@@ -1,0 +1,66 @@
+$var: ".viu-slider";
+#{$var} {
+    background: transparent;
+    height: 100%;
+    #{$var}-item {
+        height: 100%;
+    }
+    .slick-list,
+    .slick-track {
+        height: 100%;
+    }
+    .slick-dots {
+        position: absolute;
+        bottom: 0;
+        vertical-align: middle;
+        margin: 0;
+        padding: 0;
+        padding: 16px;
+        @extend .middle-horizontal;
+        li {
+            list-style: none;
+            float: left;
+            height: 12px;
+            line-height: 14px;
+            button {
+                margin: 0;
+                padding: 0;
+                margin-left: 6px;
+                margin-right: 6px;
+                width: 8px;
+                height: 8px;
+                color: transparent;
+                border-radius: 50%;
+                border: 4px solid $color-white;
+                background: transparent;
+                cursor: pointer;
+                @include transition (all 0.2s $sharpCurve);
+            }
+            &.slick-active {
+                button {
+                    border: 2px solid $color-white;
+                    margin-top: -2px;
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+        }
+    }
+    &~.next-button {
+        position: absolute;
+        bottom: 0;
+        right: 4px;
+    }
+}
+
+.viu-slider-wrapper {
+    &.inverse {
+        .slick-dots {
+            li {
+                button {
+                    border-color: $color-black;
+                }
+            }
+        }
+    }
+}
