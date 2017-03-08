@@ -35,11 +35,11 @@
                 });
             })
 
-            self.$router.beforeEach((to, from, next) => {
-                setTimeout(()=>{
-                    next();
-                }, 250)
-            })
+            // self.$router.beforeEach((to, from, next) => {
+            //     setTimeout(()=>{
+            //         next();
+            //     }, 250)
+            // })
             
         }
     }

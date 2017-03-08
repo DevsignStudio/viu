@@ -1,28 +1,16 @@
 <template>
-    <router-link :to="link" :tag="tag" class="flat-button" :type="type">
+    <button class="flat-button" :type="type">
         <slot></slot>
-    </router-link>
+    </button>
 </template>
 
 <script>
 export default {
     props: {
         type: {
-            default: "link",
+            default: "button",
             type: String,
         },
-        link: {
-            default: "",
-            type: String,
-        }
-    },
-    computed: {
-        tag() {
-            if (this.type === "link") {
-                return "a"
-            }
-            return "button";
-        }
     },
     mounted() {
         let self = this;
@@ -35,7 +23,8 @@ export default {
                 $(this).removeClass("hover");
             });
 
-            $el.on("click.button", function() {
+            
+            $el.on("click", function() {
                 var $this =$(this);
                 self.$emit('click');
                 if (self.type=== "submit") {

@@ -1,28 +1,16 @@
 <template>
-    <router-link :to="link" :tag="tag" class="raised-button" :type="type">
+    <button class="raised-button" :type="type">
         <slot></slot>
-    </router-link>
+    </button>
 </template>
 
 <script>
 export default {
     props: {
         type: {
-            default: "link",
+            default: "button",
             type: String,
         },
-        link: {
-            default: "",
-            type: String,
-        }
-    },
-    computed: {
-        tag() {
-            if (this.type === "link") {
-                return "a"
-            }
-            return "button";
-        }
     },
     mounted() {
         let self = this;

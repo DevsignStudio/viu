@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="to" :tag="tag" class="nav-item" close-navigation exact>
+    <div class="nav-item" close-navigation exact>
         <div class="nav-list" v-ripple="{background: '#d1d1d1'}">
             <slot></slot>
             <div class="chevron" v-if="sublist=== true">
@@ -9,7 +9,7 @@
         <div v-if="sublist=== true" class="nav-sublist">
             <slot name="sublist"></slot>
         </div>
-    </router-link>
+    </div>
 </template>
 
 <script>
@@ -37,11 +37,6 @@ export default {
         self.$nextTick(function() {
             let $el = $(this.$el)
             let $navList = $el.children(".nav-list");
-            if (self.to === "7w483jk5h35735j35j35838583535j3h5jh3583985935jn35hdf8g9fd8g3j5") {
-                $navList.on("click", function(e) {
-                    e.preventDefault();
-                });
-            }
             if (this.sublist === true) {
                 $navList.addClass('sublist');
                 let $navSublist = $el.find(".nav-sublist");
@@ -67,7 +62,6 @@ export default {
 
             } else {
                 $el.on("click", function(e) {
-                    e.preventDefault();
                     $el.parents(".viu-side-navigation").removeClass("open");
                     self.$emit("click");
                 });
