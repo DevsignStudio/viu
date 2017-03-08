@@ -157,7 +157,7 @@ img {
 
 a {
     color: $color-blue-700;
-    text-decoration: none;
+    text-decoration: none !important;
     outline: 0;
     &:visited {
         color: $color-blue-700;

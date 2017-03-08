@@ -2730,7 +2730,7 @@ img {
 
 a {
   color: #1976d2;
-  text-decoration: none;
+  text-decoration: none !important;
   outline: 0; }
   a:visited {
     color: #1976d2; }

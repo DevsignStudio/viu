@@ -174,7 +174,9 @@
             <clearfix class="font-display1 font-thin color-white" style="margin-top: 20px;">Welcome To</clearfix>
             <clearfix class="font-display1 font-light color-white">Viu Documentation</clearfix>
             <clearfix style="width:auto" class="button-center-container">
-                <raised-button link="components/buttons" v-ripple class="primary background-pink"><icon name="xml"></icon> Start Explore</raised-button>
+                <router-link to="/components/button">
+					<raised-button link="components/buttons" v-ripple class="primary background-pink"><icon name="xml"></icon> Start Explore</raised-button>
+				</router-link>
                 <raised-button @click="linkToGithub" v-ripple><icon name="github-circle"></icon> Github</raised-button>
             </clearfix>
 		</div>
