@@ -1,78 +1,3 @@
-// .peper-side-navigation {
-//     padding: 0 !important;
-//     z-index: 1002;
-//     @include renderIssue();
-//     @include transform(translateX(-100%) translateZ(0));
-//     @include transition(all 0.2s $sharpCurve);
-//     .peper-side-navigation-profile {
-//         width: 100%;
-//         height: 96px;
-//         background: $theme-primary-300;
-//         padding: 24px 16px;
-//         background-image: url(/packages/skynightz93_peper-ui/client/img/back1.png);
-//         background-position: center;
-//         background-size: cover;
-//         position: relative;
-//         img.img-profile {
-//             width: 48px;
-//             height: 48px;
-//             display: block;
-//             @include border-radius(50%);
-//             margin: 0;
-//             position: relative;
-//             z-index: 1;
-//             float: left;
-//             margin-right: 24px;
-//         }
-//         .profile-details {
-//             float: left;
-//             color: $color-white;
-//             a {
-//                 text-decoration: none;
-//                 color: inherit;
-//                 display: block;
-//             }
-//         }
-//         .overlay {
-//             background: $color-black;
-//             opacity: 0.4;
-//             position: absolute;
-//             width: 100%;
-//             height: 100%;
-//             top: 0;
-//             left: 0;
-//             z-index: 0;
-//         }
-//     }
-//     .peper-side-navigation-content {
-//         overflow-y: auto;
-//         overflow-x: hidden;
-//         width: 100%;
-        
-//     }
-//     &.active {
-//         @include renderIssue();
-//         @include transform(translateX(0) translateZ(0));
-//         @include transition(all 0.3s $decelerationCurve);
-//         // @include box-shadow($side-z2-shadow);
-//     }
-// }
-// .peper-side-navigation-overlay {
-//     position: fixed;
-//     width: 100%;
-//     height: 100%;
-//     top: 0;
-//     left: 0;
-//     background: $color-black;
-//     z-index: 1001;
-//     opacity: 0;
-//     visibility: hidden;
-//     @include transition(all 0.3s $decelerationCurve);
-//     &.active {
-//         opacity: 0.2;
-//         visibility: visible;
-//     }
-// }
 .viu-side-navigation {
     width: 100%;
     top: 0;
@@ -111,82 +36,83 @@
     &.open {
         @include transform(translateX(0) translateZ(0));
     }
-
     .nav-item {
-            cursor: pointer;
+        cursor: pointer;
+        display: table;
+        width: 100%;
+        text-decoration: none;
+        .nav-list {
+            width: 100%;
+            height: 48px;
+            display: block;
+            position: relative;
+            padding: 8px 20px;
+            @include typography-menu;
+            line-height: 33px;
+            text-decoration: none;
+            color: $color-grey-600;
+            z-index: 3;
+            font-weight: 400;
+            background: $color-white;
+            .mdi {
+                color: $color-grey-500;
+                vertical-align: middle;
+                margin-right: 24px;
+            }
+            .chevron {
+                position: absolute;
+                right: 12px;
+                top: 12px;
+                width: 24px;
+                height: 24px;
+                & svg {
+                    fill: $color-grey;
+                }
+            }
+        }
+        .ripple-circle {
+            z-index: 3;
+        }
+        .nav-sublist {
+            position: relative;
+            z-index: 1;
             display: table;
             width: 100%;
-            text-decoration: none;
+            height: 0;
+            @include transform(translateZ(0));
+            @include renderIssue();
+            @include transform-origin(top);
             .nav-list {
-                width: 100%;
-                height: 48px;
-                display: block;
-                position: relative;
-                padding: 8px 20px;
-                @include typography-menu;
-                line-height: 33px;
-                text-decoration: none;
-                color: $color-grey-600;
-                z-index: 3;
+                padding-left: 48px;
                 font-weight: 400;
-                background: $color-white;
-                .mdi {
-                    color: $color-grey-500;
-                    vertical-align: middle;
-                    margin-right: 24px;
+                .icon {
+                    left: 36px;
                 }
-                .chevron {
-                    position: absolute;
-                    right: 12px;
-                    top: 12px;
-                    width: 24px;
-                    height: 24px;
-                    & svg {
-                        fill: $color-grey;
+            }
+        }
+        .divider {
+            height: 1px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            background: $color-grey-200;
+        }
+    }
+    .router-link-active {
+        .nav-item {
+            .nav-list {
+                color: $theme-primary;
+                .mdi {
+                    color: $theme-primary;
+                }
+                & .chevron {
+                    svg {
+                        fill: $theme-primary;
                     }
                 }
             }
             .ripple-circle {
-                z-index: 3;
-            }
-            .nav-sublist {
-                position: relative;
-                z-index: 1;
-                display: table;
-                width: 100%;
-                height: 0;
-                @include transform(translateZ(0));
-                @include renderIssue();
-                @include transform-origin(top);
-                .nav-list {
-                    padding-left: 48px;
-                    font-weight: 400;
-                    .icon {
-                        left: 36px;
-                    }
-                }
-            }
-            .divider {
-                height: 1px;
-                margin-top: 15px;
-                margin-bottom: 15px;
-                background: $color-grey-200;
-            }
-            &.router-link-active {
-                .nav-list {
-                    color: $theme-primary;
-                    .mdi {
-                        color: $theme-primary;
-                    }
-                    & .chevron {
-                        svg {
-                            fill: $theme-primary;
-                        }
-                    }
-                }
-                .ripple-circle {
-                    background: rgba($color-indigo, 0.2) !important;
-                }
+                background: rgba($color-indigo, 0.2) !important;
             }
         }
+    }
 }

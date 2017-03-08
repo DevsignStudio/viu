@@ -4174,14 +4174,14 @@ a.color-button {
       margin-top: 15px;
       margin-bottom: 15px;
       background: #eeeeee; }
-    .viu-side-navigation .nav-item.router-link-active .nav-list {
+  .viu-side-navigation .router-link-active .nav-item .nav-list {
+    color: #2a56c6; }
+    .viu-side-navigation .router-link-active .nav-item .nav-list .mdi {
       color: #2a56c6; }
-      .viu-side-navigation .nav-item.router-link-active .nav-list .mdi {
-        color: #2a56c6; }
-      .viu-side-navigation .nav-item.router-link-active .nav-list .chevron svg {
-        fill: #2a56c6; }
-    .viu-side-navigation .nav-item.router-link-active .ripple-circle {
-      background: rgba(63, 81, 181, 0.2) !important; }
+    .viu-side-navigation .router-link-active .nav-item .nav-list .chevron svg {
+      fill: #2a56c6; }
+  .viu-side-navigation .router-link-active .nav-item .ripple-circle {
+    background: rgba(63, 81, 181, 0.2) !important; }
 
 .viu-slider {
   background: transparent;
@@ -5158,7 +5158,7 @@ table {
   z-index: 2; }
 
 .main-container {
-  background: #fff; }
+  background: transparent; }
 
 .viu-tooltip {
   background-color: #616161;
