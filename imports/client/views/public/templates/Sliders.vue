@@ -35,11 +35,10 @@
 </template>
 
 <script>
-    import {Snackbar } from "meteor/skynightz93:viu-ui";
     export default {
         methods: {
             nextAction() {
-                Snackbar.run("You can redirect to other page here");
+                this.$snackbar.run("You can redirect to other page here");
             }
         }
     }
