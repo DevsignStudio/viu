@@ -12,7 +12,7 @@ import ComponentTooltips from '/imports/client/views/public/components/Tooltips.
 import ComponentSnackbar from '/imports/client/views/public/components/Snackbar.vue';
 import ComponentConfirmation from '/imports/client/views/public/components/Confirmation.vue';
 import ComponentMenu from '/imports/client/views/public/components/Menu.vue';
-import TemplateSlider from '/imports/client/views/public/templates/Sliders.vue';
+import IntroSliders1 from '/imports/client/views/public/layouts/IntroSliders1';
 
 export default [{
     path: "/",
@@ -105,11 +105,11 @@ export default [{
         navigation: GlobalNavigation,
     }
 }, {
-    path: "/templates/sliders",
+    path: "/layouts/intro-sliders-1",
     name: "Slider",
     meta: { fixToolbar: true, pageTitle: "Slider" },
     components: {
-        default: TemplateSlider,
+        default: IntroSliders1,
         toolbar: ToolbarNoBackground,
         navigation: IndexNavigation,
     }

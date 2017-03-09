@@ -56,11 +56,11 @@
             </span>
         </nav-list>
         <nav-list class="nav-item" :sublist="true">
-            <icon name="box-shadow"></icon> Templates
+            <icon name="box-shadow"></icon> Layouts
             <span slot="sublist">
-                <router-link to="/templates/sliders" exact>
+                <router-link to="/layouts/intro-sliders-1" exact>
                     <nav-list  class="nav-item">
-                        <icon name="fullscreen"></icon> Full Screen Slider
+                        <icon name="fullscreen"></icon> Introduction Slider
                     </nav-list>
                 </router-link>
             </span>
