@@ -22,11 +22,17 @@
 </template>
 
 <script>
+    import unreveal from "../directives/v-unreveal.js"
+    import ripple from "../directives/v-ripple.js";
     export default {
         data() {
             return {
                 title: "",
             }
+        },
+        directives: {
+            unreveal: unreveal,
+            ripple: ripple,
         },
         methods: {
             confirm() {
