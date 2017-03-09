@@ -1,7 +1,6 @@
-import { Vue } from 'meteor/akryum:vue';
 import { Router } from 'meteor/akryum:vue-router2';
 
-Vue.directive('reveal', function(el, binding) {
+export default (el, binding) => {
     let $el = $(el);
     let event = binding.arg + ".reveal";
     let $target = $(binding.value);
@@ -18,4 +17,4 @@ Vue.directive('reveal', function(el, binding) {
         $target.addClass("front");
         $target.addClass("enable");
     });
-});
+};

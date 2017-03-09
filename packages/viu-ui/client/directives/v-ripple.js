@@ -1,9 +1,7 @@
-import { Vue } from 'meteor/akryum:vue';
-
-Vue.directive("ripple", {
+export default {
     bind: function(el, binding, vnode) {
         let background = null;
-        if(binding.value && binding.value.background) {
+        if (binding.value && binding.value.background) {
             background = binding.value.background;
         }
 
@@ -18,20 +16,20 @@ Vue.directive("ripple", {
 
             $el.addClass('peper-ripple');
             $el.unbind("mousedown.ripple mouseup.ripple mouseout.ripple");
-            $el.on("mousedown.ripple", function(e){
+            $el.on("mousedown.ripple", function(e) {
                 var offset = $el.offset(),
-                offsetY = (e.pageY - offset.top),
-                offsetX = (e.pageX - offset.left);
+                    offsetY = (e.pageY - offset.top),
+                    offsetX = (e.pageX - offset.left);
                 var $rippleCircle = $('<span class="ripple-circle"></span>');
 
                 $el.addClass('clicked').append(
                     $rippleCircle.css({
-                        'top' : offsetY,
-                        'left' : offsetX,
-                        "width" : square,
-                        "height" : square,
-                        "margin-top" : -(square/2),
-                        "margin-left" : -(square/2),
+                        'top': offsetY,
+                        'left': offsetX,
+                        "width": square,
+                        "height": square,
+                        "margin-top": -(square / 2),
+                        "margin-left": -(square / 2),
                     })
                 );
 
@@ -43,31 +41,31 @@ Vue.directive("ripple", {
                     overflow: "hidden"
                 });
                 $rippleCircle.css({
-                    'background' : background,
+                    'background': background,
                 });
-            }).on('mouseup.ripple mouseout.ripple', function(e){
+            }).on('mouseup.ripple mouseout.ripple', function(e) {
                 $el.removeClass('clicked')
-                .children(".ripple-circle").fadeOut("slow", function(){
-                    $(this).remove();
-                    $el.css({
-                        overflow: overflow,
+                    .children(".ripple-circle").fadeOut("slow", function() {
+                        $(this).remove();
+                        $el.css({
+                            overflow: overflow,
+                        });
                     });
-                });
             });
-        }
+        };
 
         $(document).ready(function() {
-            window.setTimeout(function(){
+            window.setTimeout(function() {
                 computed();
             }, 500);
         });
-        $(window).on('popstate', function (e) {
+        $(window).on('popstate', function(e) {
             var state = e.originalEvent.state;
             if (state) {
-                window.setTimeout(function(){
+                window.setTimeout(function() {
                     computed();
                 }, 500);
             }
         });
     }
-})
+};

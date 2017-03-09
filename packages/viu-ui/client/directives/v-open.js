@@ -1,6 +1,4 @@
-import { Vue } from 'meteor/akryum:vue';
-
-Vue.directive('open', function(el, binding) {
+export default (el, binding) => {
     let $el = $(el);
     let event = "click.open";
     let $target;
@@ -12,6 +10,7 @@ Vue.directive('open', function(el, binding) {
     }
     $el.unbind(event);
     $el.on(event, function() {
+        $target = $($target.selector);
         $target.addClass("open");
     });
-});
+};
