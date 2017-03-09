@@ -14,7 +14,7 @@
 
 <script>
 import {Velocity} from 'velocity-animate';
-import "../directives/v-ripple";
+import ripple from "../directives/v-ripple";
 export default {
     props: {
         sublist: {
@@ -23,6 +23,9 @@ export default {
         to: {
             default: "7w483jk5h35735j35j35838583535j3h5jh3583985935jn35hdf8g9fd8g3j5",
         }
+    },
+    directives: {
+        ripple
     },
     computed: {
         tag() {
