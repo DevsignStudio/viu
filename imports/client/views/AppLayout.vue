@@ -14,3 +14,16 @@
         <confirmation-dialog></confirmation-dialog>
     </div>
 </template>
+
+<script>
+    export default {
+        mounted() {
+            this.$router.beforeEach((to, from, next) => {
+                setTimeout(()=>{
+                    next();
+                }, 250)
+            })
+        }
+        
+    }
+</script>
