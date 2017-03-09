@@ -1,5 +1,5 @@
 <template>
-    <div :class="elClass" v-depth="1">
+    <div :class="elClass">
         <slot></slot>
     </div>
 </template>
@@ -35,11 +35,7 @@
                 });
             })
 
-            // self.$router.beforeEach((to, from, next) => {
-            //     setTimeout(()=>{
-            //         next();
-            //     }, 250)
-            // })
+            
             
         }
     }

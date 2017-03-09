@@ -1,5 +1,5 @@
 <template>
-    <side-navigation>
+    <side-navigation v-depth="1">
         <img src="/img/a.jpg" class="img-responsive" alt="">
         <navigation></navigation>
     </side-navigation>

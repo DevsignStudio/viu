@@ -1,7 +1,7 @@
 <template>
     <div class="appbar-padding" v-wheight>
         <div style="height:100%">
-            <tab id="tab">
+            <tab id="tab" v-depth="1">
                 <tab-item v-ripple>View</tab-item>
                 <tab-item v-ripple>Code</tab-item>
             </tab>
@@ -36,7 +36,6 @@
 </template>
 
 <script>
-    import { Snackbar, Confirmation } from "meteor/skynightz93:viu-ui";
     export default {
         data() {
             return {
@@ -80,17 +79,19 @@
         },
         methods:{
             confirmation1() {
-                Confirmation.run("Are you sure want to delete", ()=>{
-                    Snackbar.run("Confirm delete");
+                let self= this;
+                self.$confirmation.run("Are you sure want to delete", ()=>{
+                    self.$snackbar.run("Confirm delete");
                 }, ()=>{
-                    Snackbar.run("Cancel delete");
+                    self.$snackbar.run("Cancel delete");
                 });
             },
             confirmation2() {
-                Confirmation.run("Are you sure want to send this message?", ()=>{
-                    Snackbar.run("Confirm send");
+                let self= this;
+                self.$confirmation.run("Are you sure want to send this message?", ()=>{
+                    $self.snackbar.run("Confirm send");
                 }, ()=>{
-                    Snackbar.run("Don't send'");
+                    self.$snackbar.run("Don't send'");
                 }, "Send Message", "Send", "Don't Send");
             }
         }

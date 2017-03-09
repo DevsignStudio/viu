@@ -1,6 +1,6 @@
 <template>
     <div class="appbar-padding" v-wheight>
-        <div style="height:100%">
+        <div style="height:100%" v-depth="1">
             <tab id="tab">
                 <tab-item v-ripple>View</tab-item>
                 <tab-item v-ripple>Code</tab-item>

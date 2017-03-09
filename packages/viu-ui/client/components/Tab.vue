@@ -1,5 +1,5 @@
 <template>
-    <div class="viu-tab-sub-header" v-depth="1">
+    <div class="viu-tab-sub-header">
         <div class="swipe-tabs">
             <slot></slot>
         </div>

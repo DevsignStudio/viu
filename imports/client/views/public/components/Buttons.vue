@@ -1,7 +1,7 @@
 <template>
     <div class="appbar-padding" v-wheight>
         <div style="height:100%">
-            <tab id="tab">
+            <tab id="tab"  v-depth="1">
                 <tab-item v-ripple>View</tab-item>
                 <tab-item v-ripple>Code</tab-item>
             </tab>
@@ -68,7 +68,6 @@
 </template>
 
 <script>
-    import {Snackbar } from "meteor/skynightz93:viu-ui";
     export default {
         data() {
             return {
@@ -109,10 +108,10 @@
         },
         methods: {
             submit() {
-                Snackbar.run("Button has been submit");
+                this.$snackbar.run("Button has been submit");
             },
             click() {
-                Snackbar.run("Button has been click");
+                this.$snackbar.run("Button has been click");
             }
         }
     }
