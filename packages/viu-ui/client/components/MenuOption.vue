@@ -16,6 +16,7 @@ export default {
     },
     methods: {
         click() {
+            // console.log(this);
             this.$parent.$parent.$parent.$parent.tempValue = this.value;
             this.$parent.$parent.$parent.$parent.text = this.$el.innerText;
         }
