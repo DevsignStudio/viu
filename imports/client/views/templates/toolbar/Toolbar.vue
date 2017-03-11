@@ -22,9 +22,9 @@
 <script>
 export default {
     mounted() {
-        if(this.$route.matched.some(record => record.meta.fixToolbar)) {
-        }
-        this.updateTitle();
+        this.$nextTick(()=> {
+            // this.updateTitle();
+        })
     },
     data() {
         return {
@@ -41,19 +41,29 @@ export default {
     },
     methods: {
         updateTitle() {
-            if(this.$route.matched.some(record => record.meta.pageTitle)) {
-                this.title = this.$route.meta.pageTitle
-                this.$emit('updateHead')
+            if (this.$route) {
+                if(this.$route.matched.some(record => record.meta.pageTitle)) {
+                    this.title = this.$route.meta.pageTitle
+                    this.$emit('updateHead')
+                }
             }
         }
     },
     watch: {
         value(newVal) {
-            console.log("hello");
             Session.set("searchValue", newVal);
         },
         '$route'(to, from){
-            this.updateTitle();
+            // this.updateTitle();
+        }
+    },
+    beforeRouteEnter: (to, from, next) => {
+        if(to.matched.some(record => record.meta.pageTitle)) {
+            console.log(to.meta.pageTitle);
+            next(vm => {
+                vm.title = to.meta.pageTitle;
+                vm.$emit('updateHead');
+            });
         }
     }
 }

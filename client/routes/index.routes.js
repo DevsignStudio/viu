@@ -2,7 +2,7 @@ import Toolbar from '/imports/client/views/templates/toolbar/Toolbar.vue';
 import ToolbarNoBackground from '/imports/client/views/templates/toolbar/ToolbarNoBackground.vue';
 import IndexNavigation from '/imports/client/views/templates/navigation/IndexNavigation.vue';
 import GlobalNavigation from '/imports/client/views/templates/navigation/GlobalNavigation.vue';
-import Index from '/imports/client/views/public/Index.vue';
+import IndexPage from '/imports/client/views/public/Index.vue';
 import Lists from '/imports/client/views/public/components/Lists.vue';
 import SelectionControl from '/imports/client/views/public/components/SelectionControl.vue';
 import Accordions from '/imports/client/views/public/components/Accordions.vue';
@@ -19,7 +19,7 @@ export default [{
     name: "Index",
     meta: { fixToolbar: true, pageTitle: "Viu Doc" },
     components: {
-        default: Index,
+        default: IndexPage,
         toolbar: Toolbar,
         navigation: IndexNavigation,
     }

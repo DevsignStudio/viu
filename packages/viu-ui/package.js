@@ -31,7 +31,7 @@ Package.onUse(function(api) {
     });
     api.versionsFrom('1.4.1.1');
     api.use('ecmascript');
-    api.use(['jquery', 'akryum:vue@1.0.2', 'akryum:vue-component@0.3.8', 'akryum:vue-router2@0.0.1'], 'client');
+    api.use(['jquery','akryum:vue-component@0.8.10'], 'client');
     api.mainModule('viu-client.js', 'client');
     api.addFiles(['client/css/materialdesignicons.css', 'client/css/viu.css', 'client/plugin/c3/c3.css'], 'client');
 

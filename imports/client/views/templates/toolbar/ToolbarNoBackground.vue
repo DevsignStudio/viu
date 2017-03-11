@@ -11,9 +11,9 @@
 <script>
 export default {
     mounted() {
-        if(this.$route.matched.some(record => record.meta.fixToolbar)) {
-        }
-        this.updateTitle();
+        this.$nextTick(()=> {
+            // this.updateTitle();
+        })
     },
     data() {
         return {
@@ -38,11 +38,18 @@ export default {
     },
     watch: {
         value(newVal) {
-            console.log("hello");
             Session.set("searchValue", newVal);
         },
         '$route'(to, from){
-            this.updateTitle();
+            // this.updateTitle();
+        }
+    },
+    beforeRouteEnter: (to, from, next) => {
+        if(to.matched.some(record => record.meta.pageTitle)) {
+            next(vm => {
+                vm.title = to.meta.pageTitle;
+                vm.$emit('updateHead');
+            });
         }
     }
 }
