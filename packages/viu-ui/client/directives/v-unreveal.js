@@ -1,5 +1,4 @@
 import { Vue } from 'meteor/akryum:vue';
-import { Router } from 'meteor/akryum:vue-router2';
 
 export default (el, binding) => {
     let $el = $(el);

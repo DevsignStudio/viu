@@ -1,5 +1,3 @@
-import { Router } from 'meteor/akryum:vue-router2';
-
 export default (el, binding) => {
     let $el = $(el);
     let event = binding.arg + ".reveal";
