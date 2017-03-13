@@ -13,7 +13,7 @@
     "meteor-node-stubs": "~0.2.0",
     "network-js": "^2.1.0",
     "sugar": "^2.0.4",
-    "vue": "^2.2.0",
+    "vue": "^2.2.2",
     "vue-head": "^2.0.10",
     "vue-highlight.js": "^1.0.4",
     "vue-meta": "^0.5.3",

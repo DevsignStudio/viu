@@ -1,8 +1,8 @@
-import { Router } from 'meteor/akryum:vue-router2';
+import { RouterFactory } from 'meteor/akryum:vue-router2';
 
-const router = new Router({
+const routerFactory = new RouterFactory({
     mode: 'history',
     scrollBehavior: nativeScrollBehavior,
 });
 
-export default router;
+export default routerFactory;
