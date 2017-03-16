@@ -18,7 +18,8 @@
     "vue-highlight.js": "^1.0.4",
     "vue-meta": "^0.5.3",
     "vue-meteor-tracker": "^1.0.3",
-    "vue-router": "^2.0.0-rc.5"
+    "vue-router": "^2.0.0-rc.5",
+    "xml2js": "^0.4.17"
   },
   "devDependencies": {
     "meteor-desktop": "^0.6.1",

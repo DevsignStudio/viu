@@ -65,5 +65,15 @@
                 </router-link>
             </span>
         </nav-list>
+        <nav-list class="nav-item" :sublist="true">
+            <icon name="code-braces"></icon> Tools
+            <span slot="sublist">
+                <router-link to="/tools/xmi-parser" exact>
+                    <nav-list  class="nav-item">
+                        <icon name="fullscreen"></icon> XMI Parser
+                    </nav-list>
+                </router-link>
+            </span>
+        </nav-list>
     </scroll-bar>
 </template>
