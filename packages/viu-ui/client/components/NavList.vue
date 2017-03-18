@@ -40,8 +40,13 @@ export default {
         self.$nextTick(function() {
             let $el = $(this.$el)
             let $navList = $el.children(".nav-list");
+            let $elIndex = parseInt($el.index());
+            
+            $el.css("z-index", 100 - $elIndex);
+            
             if (this.sublist === true) {
                 $navList.addClass('sublist');
+                
                 let $navSublist = $el.find(".nav-sublist");
                 let $chevron = $navList.children('.chevron');
                 let sublistHeight = $navSublist.outerHeight();
