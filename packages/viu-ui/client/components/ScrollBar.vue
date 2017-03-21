@@ -32,7 +32,6 @@
 
                 $(self.$el).resize(function() {
                     self.sbar.recalculate();
-                    console.log(self.$el.offsetHeight);
                 })
             })
         }
