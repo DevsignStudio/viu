@@ -72,7 +72,6 @@
 </template>
 
 <script>
-    import { Snackbar, Confirmation } from "meteor/skynightz93:viu-ui";
     export default {
         data() {
             return {
