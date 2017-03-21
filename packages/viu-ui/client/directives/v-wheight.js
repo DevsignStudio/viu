@@ -4,4 +4,8 @@ export default (el, binding) => {
     }
     let $el = $(el);
     el.style.height = (window.innerHeight * binding.value / 100) + 'px';
+
+    $(window).on("resize", function() {
+        el.style.height = (window.innerHeight * binding.value / 100) + 'px';
+    })
 };

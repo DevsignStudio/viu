@@ -25,27 +25,14 @@
                     }
                     return strValue;
                 }
-                padding = parseInt(getStyle(self.$el.parentNode, "padding-top")) + parseInt(getStyle(self.$el.parentNode, "padding-bottom"));
-                self.$el.style.height = (self.$el.parentNode.offsetHeight - padding ) + "px";
-                self.contentHeight = self.sbar.getScrollElement().childNodes[0].offsetHeight;
+                // self.sbar.getContentElement().style.width = "calc(100% + 8px)";
+                $(self.sbar.getContentElement()).resize(function() {
 
-                $(self.sbar.getScrollElement().childNodes[0]).resize(function() {
-                    let diff = self.contentHeight - this.offsetHeight;
-                    self.$el.style.height = (self.$el.offsetHeight - diff) + "px";
-                    self.contentHeight = this.offsetHeight;
-                    self.sbar.recalculate();
                 });
 
                 $(self.$el).resize(function() {
                     self.sbar.recalculate();
-                })
-                $(window).on('resize', function() {
-                    self.sbar.recalculate();
-                    let currentHeight = self.$el.parentNode.offsetHeight;
-                    if (currentHeight > self.sbar.getScrollElement().childNodes[0].offsetHeight){
-                        currentHeight = self.sbar.getScrollElement().childNodes[0].offsetHeight
-                    }
-                    self.$el.style.height = currentHeight + "px";
+                    console.log(self.$el.offsetHeight);
                 })
             })
         }

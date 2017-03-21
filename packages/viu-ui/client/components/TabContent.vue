@@ -1,6 +1,6 @@
 <template>
     <div class="main-container">
-        <div class="swipe-tabs-container">
+        <div class="swipe-tabs-container" ref="tabContainer">
             <slot></slot>
         </div>
     </div>
@@ -27,6 +27,11 @@
                 });
                 $(self.$el).find(".swipe-tab-content").each(function() {
                     this.style.height = (self.$el.parentNode.offsetHeight - siblingsHeight -2) + "px";
+                    self.$el.childNodes[0].style.height = this.style.height;
+                    $(this).resize(function() {
+                        this.style.height = (self.$el.parentNode.offsetHeight - siblingsHeight -2) + "px";
+                        self.$refs.tabContainer.style.height = this.style.height;
+                    })
                 });
                 var $swipeTabsContainer = $(self.element).find('.swipe-tabs'),
                     $swipeTabs = $swipeTabsContainer.find('.swipe-tab'),
@@ -80,6 +85,8 @@
                     $swipeTabsContainer.slick('slickGoTo', (currentIndex-1));
                     // console.log(currentIndex - 1);
                 });
+
+                
             })
         }
     }

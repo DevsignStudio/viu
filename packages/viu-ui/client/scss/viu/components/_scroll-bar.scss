@@ -5,6 +5,18 @@
     overflow: hidden;
     -webkit-overflow-scrolling: touch;
     @include transform(translateZ(0));
+    .simplebar-scroll-content {
+        overflow: auto;
+        position: relative;
+        z-index: 0;
+        // padding: 0 15px 15px 0;
+        // margin: 0 -15px -15px 0;
+        // max-width: 100%;
+        width: calc(100% + 15px);
+        // .simplebar-content {
+        //     width: calc(100% + 15px) !important;
+        // }
+    }
     .simplebar-track {
         &.vertical {
             width: 4px;

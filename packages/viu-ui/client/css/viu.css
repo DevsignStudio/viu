@@ -3152,6 +3152,11 @@ a {
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0); }
+  .simplebar .simplebar-scroll-content {
+    overflow: auto;
+    position: relative;
+    z-index: 0;
+    width: calc(100% + 15px); }
   .simplebar .simplebar-track.vertical {
     width: 4px; }
     .simplebar .simplebar-track.vertical .simplebar-scrollbar {
@@ -5129,8 +5134,6 @@ table {
 .slick-initialized .swipe-tab-content {
   position: relative;
   height: 500px; }
-  .slick-initialized .swipe-tab-content .simplebar {
-    height: 100% !important; }
 .slick-initialized.swipe-tabs {
   background: #2a56c6; }
 .slick-initialized .swipe-tab {
