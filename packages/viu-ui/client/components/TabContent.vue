@@ -17,6 +17,10 @@
                 default: 3,
                 type: Number,
             },
+            swipe: {
+                default: true,
+                type: Boolean,
+            }
         },
         mounted(){
             var self= this;
@@ -62,9 +66,9 @@
                     slidesToScroll: 1,
                     arrows: false,
                     infinite: false,
-                    swipeToSlide: true,
+                    swipeToSlide: self.swipe,
                     draggable: false,
-                    touchThreshold: 10
+                    touchThreshold: 100
                 });
 
 

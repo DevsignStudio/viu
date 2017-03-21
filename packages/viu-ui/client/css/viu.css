@@ -4238,6 +4238,30 @@ a.color-button {
 .viu-slider-wrapper.inverse .slick-dots li button {
   border-color: #000000; }
 
+.image-slider .image-slider-item {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  display: block;
+  text-decoration: none;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0); }
+  .image-slider .image-slider-item img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 100%;
+    -webkit-transform: translate3D(-50%, -50%, 0);
+    -moz-transform: translate3D(-50%, -50%, 0);
+    -ms-transform: translate3D(-50%, -50%, 0);
+    -o-transform: translate3D(-50%, -50%, 0);
+    transform: translate3D(-50%, -50%, 0);
+    z-index: 0; }
+
 .peper-switches {
   height: 48px;
   width: 48px;

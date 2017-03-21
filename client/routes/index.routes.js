@@ -12,6 +12,7 @@ import ComponentTooltips from '/imports/client/views/public/components/Tooltips.
 import ComponentSnackbar from '/imports/client/views/public/components/Snackbar.vue';
 import ComponentConfirmation from '/imports/client/views/public/components/Confirmation.vue';
 import ComponentMenu from '/imports/client/views/public/components/Menu.vue';
+import Sliders from '/imports/client/views/public/components/Sliders.vue';
 import IntroSliders1 from '/imports/client/views/public/layouts/IntroSliders1';
 
 export default [{
@@ -34,7 +35,7 @@ export default [{
     }
 }, {
     path: "/components/selection-control",
-    name: "SelectionCOntrol",
+    name: "SelectionControl",
     meta: { fixToolbar: true, pageTitle: "Selection Control" },
     components: {
         default: SelectionControl,
@@ -113,4 +114,13 @@ export default [{
         toolbar: ToolbarNoBackground,
         navigation: IndexNavigation,
     }
-}, ];
+}, {
+    path: "/components/slider",
+    name: "Sliders",
+    meta: { fixToolbar: true, pageTitle: "Sliders" },
+    components: {
+        default: Sliders,
+        toolbar: Toolbar,
+        navigation: GlobalNavigation,
+    }
+},];

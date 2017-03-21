@@ -48,6 +48,11 @@
                         <icon name="message"></icon> Snackbar
                     </nav-list>
                 </router-link>
+                <router-link to="/components/slider" exact>
+                    <nav-list class="nav-item">
+                        <icon name="tooltip"></icon> Sliders
+                    </nav-list>
+                </router-link>
                 <router-link to="/components/tooltips" exact>
                     <nav-list class="nav-item">
                         <icon name="tooltip"></icon> Tooltips
