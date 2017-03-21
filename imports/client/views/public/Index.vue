@@ -278,7 +278,7 @@
     </page-container>-->
 </template>
 <script>
-    import { PageLoadMixin, Snackbar } from "meteor/skynightz93:viu-ui";
+    // import { PageLoadMixin, Snackbar } from "meteor/skynightz93:viu-ui";
     // export default {
     //     data() {
     //         return {

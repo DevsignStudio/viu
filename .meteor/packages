@@ -36,6 +36,6 @@ jagi:astronomy-softremove-behavior
 reywood:publish-composite
 peerlibrary:user-extra
 peerlibrary:reactive-publish
-skynightz93:viu-ui
 akryum:vue-sass
 dynamic-import@0.1.0-beta.10
+devsignstudio:viu-ui

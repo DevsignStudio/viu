@@ -89,7 +89,7 @@
             confirmation2() {
                 let self= this;
                 self.$confirmation.run("Are you sure want to send this message?", ()=>{
-                    $self.snackbar.run("Confirm send");
+                    self.$snackbar.run("Confirm send");
                 }, ()=>{
                     self.$snackbar.run("Don't send'");
                 }, "Send Message", "Send", "Don't Send");
