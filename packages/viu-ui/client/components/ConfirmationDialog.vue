@@ -24,6 +24,7 @@
 <script>
     import unreveal from "../directives/v-unreveal.js"
     import ripple from "../directives/v-ripple.js";
+    import depth  from "../directives/v-depth.js";
     export default {
         data() {
             return {
@@ -31,8 +32,9 @@
             }
         },
         directives: {
-            unreveal: unreveal,
-            ripple: ripple,
+            unreveal,
+            ripple,
+            depth,
         },
         methods: {
             confirm() {

@@ -25,10 +25,11 @@ export default {
                 small = $(self.$el.children[0]);
             var img = new Image();
             img.src = self.imgSmall;
-            placeholder.css({ "padding-bottom": (img.height/img.width * 100) + "%" })
-            small.css({filter: "blur("+ placeholder.outerWidth() /15 +"px)"})
-            self.$el.children[0].classList.add("loaded")
+            
             img.onload = function() {
+                placeholder.css({ "padding-bottom": (img.height/img.width * 100) + "%" })
+                small.css({filter: "blur("+ placeholder.outerWidth() /15 +"px)"})
+                self.$el.children[0].classList.add("loaded")
                 small.addClass('loaded');
             };
 
@@ -40,10 +41,8 @@ export default {
                     let checkPosition = function() {
                         if(placeholder.isOnScreen()) {
                             placeholder.parents(".optiscroll").off("scroll.load-img-" + id);
-                            window.setTimeout(function(){
-                                imgLarge.classList.add('loaded');
-                                small.css({filter: "none"})
-                            }, 500);
+                            imgLarge.classList.add('loaded');
+                            small.css({filter: "none"})
                         }
                     }
 

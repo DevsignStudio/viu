@@ -28,6 +28,7 @@ Package.onUse(function(api) {
         'mobify-plugin': '4.0.0',
         'is-touch': '1.0.2',
         'slick-carousel': '1.6.0',
+        'blurify': '1.0.7',
     });
     api.versionsFrom('1.4.1.1');
     api.use('ecmascript');

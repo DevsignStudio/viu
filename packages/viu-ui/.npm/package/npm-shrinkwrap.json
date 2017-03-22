@@ -5,15 +5,20 @@
       "resolved": "https://registry.npmjs.org/bellows-ui/-/bellows-ui-6.0.1.tgz",
       "from": "bellows-ui@6.0.1"
     },
+    "blurify": {
+      "version": "1.0.7",
+      "resolved": "https://registry.npmjs.org/blurify/-/blurify-1.0.7.tgz",
+      "from": "blurify@1.0.7"
+    },
     "is-touch": {
       "version": "1.0.2",
       "resolved": "https://registry.npmjs.org/is-touch/-/is-touch-1.0.2.tgz",
       "from": "is-touch@1.0.2"
     },
     "jquery": {
-      "version": "3.1.1",
-      "resolved": "https://registry.npmjs.org/jquery/-/jquery-3.1.1.tgz",
-      "from": "jquery@3.1.1"
+      "version": "3.2.1",
+      "resolved": "https://registry.npmjs.org/jquery/-/jquery-3.2.1.tgz",
+      "from": "jquery@>=3.1.1 <4.0.0"
     },
     "kute.js": {
       "version": "1.5.96",
