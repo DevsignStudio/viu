@@ -59,16 +59,16 @@
                     swipeToSlide: true,
                     touchThreshold: 10,
                 });
-
                 $swipeTabsContentContainer.slick({
                     asNavFor: $swipeTabsContainer,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     arrows: false,
                     infinite: false,
-                    swipeToSlide: self.swipe,
+                    swipeToSlide: true,
+                    swipe: self.swipe,
                     draggable: false,
-                    touchThreshold: 100
+                    edgeFriction: 0.05,
                 });
 
 
