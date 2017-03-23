@@ -13,6 +13,7 @@ import ComponentSnackbar from '/imports/client/views/public/components/Snackbar.
 import ComponentConfirmation from '/imports/client/views/public/components/Confirmation.vue';
 import ComponentMenu from '/imports/client/views/public/components/Menu.vue';
 import Sliders from '/imports/client/views/public/components/Sliders.vue';
+import LoadImgs  from "/imports/client/views/public/components/LoadImgs.vue";
 import IntroSliders1 from '/imports/client/views/public/layouts/IntroSliders1';
 
 export default [{
@@ -123,4 +124,13 @@ export default [{
         toolbar: Toolbar,
         navigation: GlobalNavigation,
     }
-},];
+},{
+    path: "/components/load-img",
+    name: "Load Image",
+    meta: { fixToolbar: true, pageTitle: "LazyLoad Image" },
+    components: {
+        default: LoadImgs,
+        toolbar: Toolbar,
+        navigation: GlobalNavigation,
+    }
+}];

@@ -33,6 +33,11 @@
                         <icon name="format-list-bulleted"></icon> Lists
                     </nav-list>
                 </router-link>
+                <router-link to="/components/load-img" exact>
+                    <nav-list class="nav-item">
+                        <icon name="image"></icon> Load Image
+                    </nav-list>
+                </router-link>
                 <router-link to="/components/menu" exact>
                     <nav-list class="nav-item">
                         <icon name="image-filter-none"></icon> Menu
