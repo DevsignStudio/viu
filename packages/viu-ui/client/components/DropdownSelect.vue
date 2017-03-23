@@ -62,7 +62,7 @@ export default {
                 Helper.removeClass(this.options[i].$el, 'active');
                 if (this.value === this.options[i].value) {
                     Helper.addClass(this.options[i].$el, 'active');
-                    this.text = this.options[i].$el.innerHTML;
+                    this.text = this.options[i].$el.innerText;
                     noMatch = false;
                     break;
                 }
