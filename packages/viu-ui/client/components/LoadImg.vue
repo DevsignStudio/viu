@@ -5,6 +5,7 @@
 </template>
 
 <script>
+    import * as Vibrant from 'node-vibrant';
     export default {
         props: {
             img: {
@@ -23,14 +24,11 @@
                     small = $(self.$el.children[0]);
                 var imgLarge = new Image();
                 imgLarge.src = self.img;
+                placeholder.append(imgLarge);
                 imgLarge.onload = function () {
                     if (!imgLarge.classList.contains('loaded')) {
                         setTimeout(() => {
                             imgLarge.classList.add('loaded');
-                            small.css({
-                                filter: "none"
-                            })
-                            placeholder.append(imgLarge);
                             self.checkDone = true;
                         }, 500)
                     }
@@ -47,15 +45,18 @@
                 var img = new Image();
                 img.src = self.imgSmall;
 
+               
+                
                 img.onload = function () {
-                    placeholder.css({
-                        "padding-bottom": (img.height / img.width * 100) + "%"
-                    })
-                    small.css({
-                        filter: "blur(" + placeholder.outerWidth() / 15 + "px)"
-                    })
-                    self.$el.children[0].classList.add("loaded")
-                    small.addClass('loaded');
+                    Vibrant.from(img.src).getPalette((err, palette) => {
+                        let rgb = palette.Vibrant._rgb;
+                        let hex = Vibrant.Util.rgbToHex(rgb[0], rgb[1], rgb[2])
+                        placeholder.css({
+                            "padding-bottom": (img.height / img.width * 100) + "%",
+                            'background': hex,
+                        })
+                    });
+
                     if (placeholder.isOnScreen()) {
                         self.injectImg();
                     } else {

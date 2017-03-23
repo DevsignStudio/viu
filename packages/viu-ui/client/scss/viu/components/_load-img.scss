@@ -15,6 +15,7 @@
         width: 100%;
         transition: opacity 1s linear;
         @include transform(translateZ(0));
+        will-change: transform;
     }
 
     img.loaded {
@@ -22,6 +23,7 @@
     }
 
     .img-small {
+        opacity: 0;
         @include renderIssue();
         @include transform(scale(1) translateZ(0));
     }

@@ -29,6 +29,7 @@ Package.onUse(function(api) {
         'is-touch': '1.0.2',
         'slick-carousel': '1.6.0',
         'blurify': '1.0.7',
+        'node-vibrant': '3.0.0-alpha.2',
     });
     api.versionsFrom('1.4.1.1');
     api.use('ecmascript');

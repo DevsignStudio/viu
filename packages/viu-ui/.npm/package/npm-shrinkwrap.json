@@ -30,6 +30,11 @@
       "resolved": "https://registry.npmjs.org/mobify-plugin/-/mobify-plugin-4.0.0.tgz",
       "from": "mobify-plugin@4.0.0"
     },
+    "node-vibrant": {
+      "version": "3.0.0-alpha.2",
+      "resolved": "https://registry.npmjs.org/node-vibrant/-/node-vibrant-3.0.0-alpha.2.tgz",
+      "from": "node-vibrant@3.0.0-alpha.2"
+    },
     "numeral": {
       "version": "2.0.4",
       "resolved": "https://registry.npmjs.org/numeral/-/numeral-2.0.4.tgz",
