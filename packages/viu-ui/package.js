@@ -1,6 +1,6 @@
 Package.describe({
     name: 'devsignstudio:viu-ui',
-    version: '0.0.4',
+    version: '0.0.7',
     // Brief, one-line summary of the package.
     summary: 'Material Design vue-meteor package',
     // URL to the Git repository containing the source code for this package.
