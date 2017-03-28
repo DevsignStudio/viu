@@ -11,13 +11,22 @@
             hasOverlay: {
                 default: true,
             },
-            disableOverlay: {
+            value: {
                 default: false,
+            }
+        },
+        watch: {
+            value(newVal) {
+                if (newVal){
+                    this.enable();
+                } else {
+                    this.disable();
+                }
             }
         },
         methods: {
             disable() {
-                if(this.disableOverlay) {
+                if(!this.hasOverlay) {
                     return;
                 }
                 let $el = $(this.$el);
@@ -28,6 +37,7 @@
                         $el.removeClass("front");
                     }
                 });
+                this.$emit('input', false)
             },
             enable() {
                 let $el = $(this.$el);

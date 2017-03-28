@@ -14,6 +14,7 @@ import ComponentConfirmation from '/imports/client/views/public/components/Confi
 import ComponentMenu from '/imports/client/views/public/components/Menu.vue';
 import Sliders from '/imports/client/views/public/components/Sliders.vue';
 import LoadImgs  from "/imports/client/views/public/components/LoadImgs.vue";
+import Modals  from "/imports/client/views/public/components/Modals.vue";
 import IntroSliders1 from '/imports/client/views/public/layouts/IntroSliders1';
 
 export default [{
@@ -130,6 +131,15 @@ export default [{
     meta: { fixToolbar: true, pageTitle: "LazyLoad Image" },
     components: {
         default: LoadImgs,
+        toolbar: Toolbar,
+        navigation: GlobalNavigation,
+    }
+},{
+    path: "/components/modals",
+    name: "Modals",
+    meta: { fixToolbar: true, pageTitle: "Modal" },
+    components: {
+        default: Modals,
         toolbar: Toolbar,
         navigation: GlobalNavigation,
     }

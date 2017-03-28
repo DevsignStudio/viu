@@ -43,6 +43,11 @@
                         <icon name="image-filter-none"></icon> Menu
                     </nav-list>
                 </router-link>
+                <router-link to="/components/modals" exact>
+                    <nav-list class="nav-item">
+                        <icon name="image-filter-none"></icon> Modal
+                    </nav-list>
+                </router-link>
                 <router-link to="/components/selection-control" exact>
                     <nav-list class="nav-item">
                         <icon name="toggle-switch"></icon> Selection Control
