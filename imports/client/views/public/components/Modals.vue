@@ -3,14 +3,18 @@
         <div style="height: 100%">
             <raised-button @click="show = true">Hello</raised-button>
             <reveal id="hello" v-model="show">
-                <div class="col-md-fluid-12">
+                <div class="col-md-fluid-10">
                     <cards>
                         <cards-image img="/img/a.jpg" v-ripple></cards-image>
+                        <cards-content-scrollbar>
+                            <div style="height: 1300px">
+                                Test
+                            </div>
+                        </cards-content-scrollbar>
                         <divider></divider>
                         <cards-action>
-
                             <div class="pull-right">
-                                <flat-button v-ripple>Cancel</flat-button>
+                                <flat-button v-ripple @click="show = false">Cancel</flat-button>
                                 <flat-button v-ripple class="primary" @click="show = false">OK</flat-button>
                             </div>
                         </cards-action>

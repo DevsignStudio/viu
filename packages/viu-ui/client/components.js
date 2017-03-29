@@ -8,6 +8,7 @@ import Avatar from './components/Avatar.vue';
 import Cards from './components/Cards.vue';
 import CardsAction from './components/CardsAction.vue';
 import CardsContent from './components/CardsContent.vue';
+import CardsContentScrollbar from './components/CardsContentScrollbar.vue';
 import CardsHeader from './components/CardsHeader.vue';
 import CardsImage from './components/CardsImage.vue';
 import CardsSlider from './components/CardsSlider.vue';
@@ -63,6 +64,7 @@ export default {
         vmVue.component("cards", Cards);
         vmVue.component("cards-action", CardsAction);
         vmVue.component("cards-content", CardsContent);
+        vmVue.component("cards-content-scrollbar", CardsContentScrollbar);
         vmVue.component("cards-header", CardsHeader);
         vmVue.component("cards-image", CardsImage);
         vmVue.component("cards-slider", CardsSlider);
