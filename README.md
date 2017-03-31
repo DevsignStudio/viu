@@ -5,6 +5,7 @@
 Install Meteor framework first and then run in project folder:
 
 ```
+git clone https://github.com/DevsignStudio/viu.git
 meteor npm install
 meteor
 ```
