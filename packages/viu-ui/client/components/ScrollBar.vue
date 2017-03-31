@@ -27,7 +27,7 @@
                 }
                 // self.sbar.getContentElement().style.width = "calc(100% + 8px)";
                 $(self.sbar.getContentElement()).resize(function() {
-
+                    self.sbar.recalculate();
                 });
 
                 $(self.$el).resize(function() {
