@@ -38,6 +38,10 @@ Current progress:
 - [x] Sliders
 - [x] Tooltips (buggy)
 - [X] Textfield (single & multiline)
+- [X] Tab
+- [X] Icon
+- [X] Icon Button
+- [X] SearchBox
 - [ ] FAB
 - [ ] Date picker
 - [ ] Time picker
