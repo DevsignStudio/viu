@@ -1,13 +1,15 @@
 <template>
     <div :class="elClass">
-        <input :disabled="disabled || isInfo" ref="input" :type="type" :value="value" @focus="focusInput" @input="updateValue($event.target.value)">
-        <div class="viu-textfield-floating-placeholder" @click="focusTextfield">{{placeholder}}</div>
+        <textarea rows="1" v-if="type === 'multiline'" :disabled="disabled || isInfo" @focus="focusInput" ref="textarea" @input="updateValue($event.target.value)" v-model="textareaData"></textarea>
+        <input v-if="type!== 'multiline'" :disabled="disabled || isInfo" ref="input" :type="type" :value="value" @focus="focusInput" @input="updateValue($event.target.value)">
+        <div class="viu-textfield-floating-placeholder" @click="focusInput">{{placeholder}}</div>
         <div class="viu-textfield-line"></div>
         <div :class="messageClass">{{message}}</div>
     </div>
 </template>
 
 <script>
+    import autosize from "../plugin/autosize.min.js";
     export default {
         props: {
             type: {
@@ -31,7 +33,7 @@
             isInfo: {
                 default: false,
                 type: Boolean,
-            }
+            },
         },
         computed: {
             messageClass() {
@@ -44,11 +46,22 @@
                 return {
                     'viu-textfield': true,
                     'is-info': this.isInfo,
+                    'multiline': this.isMultiline,
                 }
+            },
+            isMultiline() {
+                if (this.type === "multiline") {
+                    return true;
+                }
+                return false;
+            },
+            textareaData() {
+                return this.value;
             }
         },
         mounted() {
             this.checkIfHasValue();
+            autosize(this.$refs.textarea);
         },
         watch: {
             value(val) {
@@ -63,19 +76,25 @@
             },
             checkIfHasValue() {
                 var $el = $(this.$refs.input)
+    
+                if (this.isMultiline) {
+                    $el = $(this.$refs.textarea);
+                }
                 if (this.value === "") {
                     $el.removeClass("has-text");
                 } else {
                     $el.addClass("has-text");
                 }
-            },
-            focusTextfield() {
-                $(this.$refs.input).focus();
-                $(this.$refs.input).select();
+    
             },
             focusInput() {
-                $(this.$refs.input).focus();
-                $(this.$refs.input).select();
+                if (this.isMultiline) {
+                    $(this.$refs.textarea).focus();
+                    $(this.$refs.textarea).select();
+                } else {
+                    $(this.$refs.input).focus();
+                    $(this.$refs.input).select();
+                }
             }
         }
     }

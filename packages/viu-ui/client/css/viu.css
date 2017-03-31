@@ -4992,13 +4992,16 @@ a.color-button {
   display: inline-block;
   vertical-align: middle;
   width: 100%;
-  height: 72px; }
+  height: auto; }
+  .viu-textfield.multiline {
+    height: auto; }
   .viu-textfield-line {
     width: 100%;
     border-bottom: 2px solid #2a56c6;
     position: absolute;
-    bottom: 9px;
+    bottom: 8px;
     left: 0;
+    z-index: 2;
     -webkit-transform: scaleX(0) translateZ(0);
     -moz-transform: scaleX(0) translateZ(0);
     -ms-transform: scaleX(0) translateZ(0);
@@ -5057,12 +5060,19 @@ a.color-button {
       -o-transform: translateY(0) translateZ(0);
       transform: translateY(0) translateZ(0);
       opacity: 1; }
-  .viu-textfield input {
+  .viu-textfield textarea {
+    width: 100%;
+    resize: none;
+    height: 18px; }
+    .viu-textfield textarea ~ .viu-textfield-line {
+      bottom: 15px; }
+  .viu-textfield input, .viu-textfield textarea {
     z-index: 1;
     width: 100%;
     border: 0;
-    margin: 0;
-    padding: 8px 0;
+    padding: 0;
+    margin: 8px 0;
+    margin-bottom: 0;
     padding-bottom: 7px;
     background: transparent;
     outline: none;
@@ -5074,38 +5084,38 @@ a.color-button {
     -ms-transform: translateZ(0);
     -o-transform: translateZ(0);
     transform: translateZ(0); }
-    .viu-textfield input:focus ~ .viu-textfield-line {
+    .viu-textfield input:focus ~ .viu-textfield-line, .viu-textfield textarea:focus ~ .viu-textfield-line {
       -webkit-transform: scaleX(1) translateZ(0);
       -moz-transform: scaleX(1) translateZ(0);
       -ms-transform: scaleX(1) translateZ(0);
       -o-transform: scaleX(1) translateZ(0);
       transform: scaleX(1) translateZ(0); }
-    .viu-textfield input:focus ~ .viu-textfield-floating-placeholder, .viu-textfield input:focus ~ .viu-textfield-message {
+    .viu-textfield input:focus ~ .viu-textfield-floating-placeholder, .viu-textfield input:focus ~ .viu-textfield-message, .viu-textfield textarea:focus ~ .viu-textfield-floating-placeholder, .viu-textfield textarea:focus ~ .viu-textfield-message {
       color: #2a56c6; }
-    .viu-textfield input:focus ~ .viu-textfield-message {
+    .viu-textfield input:focus ~ .viu-textfield-message, .viu-textfield textarea:focus ~ .viu-textfield-message {
       opacity: 1;
       -webkit-transform: translateY(0) translateZ(0);
       -moz-transform: translateY(0) translateZ(0);
       -ms-transform: translateY(0) translateZ(0);
       -o-transform: translateY(0) translateZ(0);
       transform: translateY(0) translateZ(0); }
-    .viu-textfield input.has-text ~ .viu-textfield-floating-placeholder, .viu-textfield input:focus ~ .viu-textfield-floating-placeholder {
+    .viu-textfield input.has-text ~ .viu-textfield-floating-placeholder, .viu-textfield input:focus ~ .viu-textfield-floating-placeholder, .viu-textfield textarea.has-text ~ .viu-textfield-floating-placeholder, .viu-textfield textarea:focus ~ .viu-textfield-floating-placeholder {
       -webkit-transform: scale(0.75) translateY(-28px) translateZ(0);
       -moz-transform: scale(0.75) translateY(-28px) translateZ(0);
       -ms-transform: scale(0.75) translateY(-28px) translateZ(0);
       -o-transform: scale(0.75) translateY(-28px) translateZ(0);
       transform: scale(0.75) translateY(-28px) translateZ(0); }
-    .viu-textfield input:disabled {
+    .viu-textfield input:disabled, .viu-textfield textarea:disabled {
       cursor: auto;
       pointer-events: none; }
-      .viu-textfield input:disabled ~ .viu-textfield-floating-placeholder, .viu-textfield input:disabled ~ .viu-textfield-message {
+      .viu-textfield input:disabled ~ .viu-textfield-floating-placeholder, .viu-textfield input:disabled ~ .viu-textfield-message, .viu-textfield textarea:disabled ~ .viu-textfield-floating-placeholder, .viu-textfield textarea:disabled ~ .viu-textfield-message {
         cursor: auto;
         pointer-events: none; }
   .viu-textfield.is-info .viu-textfield-floating-placeholder,
   .viu-textfield.is-info .viu-textfield-message,
-  .viu-textfield.is-info input {
+  .viu-textfield.is-info input, .viu-textfield.is-info textarea {
     color: #616161; }
-  .viu-textfield.is-info input {
+  .viu-textfield.is-info input, .viu-textfield.is-info textarea {
     border-bottom: 1px solid #e0e0e0; }
 
 table {

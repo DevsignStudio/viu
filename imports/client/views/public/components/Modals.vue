@@ -7,9 +7,8 @@
                     <cards>
                         <cards-image img="/img/a.jpg" v-ripple></cards-image>
                         <cards-content-scrollbar>
-                            <div style="height: 1300px">
-                                Test
-                            </div>
+                            <textfield type="text" v-model="text" placeholder="Example Text"></textfield>
+                            <textfield type="multiline" v-model="text" placeholder="Example Text"></textfield>
                         </cards-content-scrollbar>
                         <divider></divider>
                         <cards-action>
@@ -32,6 +31,7 @@
         data() {
             return {
                 show: false,
+                text: "",
             }
         },
         methods: {
