@@ -9,6 +9,14 @@ meteor npm install
 meteor
 ```
 
+Or you can install packages in existing project:
+
+```
+meteor add akryum:vue akryum:vue-router2 akryum:vue-component
+meteor add devsignstudio:viu-ui
+meteor npm rebuild
+```
+
 Current progress:
 
 - [x] Appbar
