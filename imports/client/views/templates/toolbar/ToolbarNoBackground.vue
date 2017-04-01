@@ -10,11 +10,6 @@
 
 <script>
 export default {
-    mounted() {
-        this.$nextTick(()=> {
-            // this.updateTitle();
-        })
-    },
     data() {
         return {
             value: "",
@@ -40,9 +35,6 @@ export default {
         value(newVal) {
             Session.set("searchValue", newVal);
         },
-        '$route'(to, from){
-            // this.updateTitle();
-        }
     },
     beforeRouteEnter: (to, from, next) => {
         if(to.matched.some(record => record.meta.pageTitle)) {

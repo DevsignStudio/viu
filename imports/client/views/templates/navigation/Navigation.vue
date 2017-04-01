@@ -8,6 +8,11 @@
         <nav-list class="nav-item" :sublist="true">
             <icon name="shape-plus"></icon> Components
             <span slot="sublist">
+                <router-link to="/components/appbar" exact>
+                    <nav-list class="nav-item">
+                        <icon name="tooltip"></icon> Appbar
+                    </nav-list>
+                </router-link>
                 <router-link to="/components/buttons" exact>
                     <nav-list class="nav-item">
                         <icon name="crop-landscape"></icon> Buttons

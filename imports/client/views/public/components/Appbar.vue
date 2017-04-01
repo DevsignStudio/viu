@@ -1,5 +1,5 @@
 <template>
     <div>
-        Hello
+        Appbar
     </div>
 </template>

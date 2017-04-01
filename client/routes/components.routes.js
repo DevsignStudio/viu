@@ -12,6 +12,7 @@ import ComponentMenu from '/imports/client/views/public/components/Menu.vue';
 import Sliders from '/imports/client/views/public/components/Sliders.vue';
 import LoadImgs  from "/imports/client/views/public/components/LoadImgs.vue";
 import Modals  from "/imports/client/views/public/components/Modals.vue";
+import Appbar  from "/imports/client/views/public/components/Appbar.vue";
 
 let routesParent = "/components"
 
@@ -120,6 +121,15 @@ export default [{
     meta: { fixToolbar: true, pageTitle: "Modal" },
     components: {
         default: Modals,
+        toolbar: Toolbar,
+        navigation: GlobalNavigation,
+    }
+},{
+    path: `${routesParent}/appbar`,
+    name: "Appbar",
+    meta: { fixToolbar: true, pageTitle: "Appbar" },
+    components: {
+        default: Appbar,
         toolbar: Toolbar,
         navigation: GlobalNavigation,
     }

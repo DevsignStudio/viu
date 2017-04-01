@@ -15,7 +15,7 @@ export default [{
 },{
     path: `${routesParent}/login`,
     name: "RegisterLogin",
-    meta: { fixToolbar: true, pageTitle: "" },
+    meta: { fixToolbar: true, pageTitle: "Testing" },
     components: {
         default: RegisterLogin,
         toolbar: ToolbarNoBackground,
