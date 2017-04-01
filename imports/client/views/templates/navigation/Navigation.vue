@@ -78,6 +78,11 @@
                         <icon name="fullscreen"></icon> Introduction Slider
                     </nav-list>
                 </router-link>
+                <router-link to="/layouts/login" exact>
+                    <nav-list  class="nav-item">
+                        <icon name="fullscreen"></icon> Register Login
+                    </nav-list>
+                </router-link>
             </span>
         </nav-list>
         <nav-list class="nav-item" :sublist="true">

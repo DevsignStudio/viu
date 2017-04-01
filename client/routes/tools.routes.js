@@ -1,11 +1,10 @@
-import Toolbar from '/imports/client/views/templates/toolbar/Toolbar.vue';
-import IndexNavigation from '/imports/client/views/templates/navigation/IndexNavigation.vue';
+import {Toolbar, IndexNavigation} from "/imports/client/template";
 import XmiParser from "/imports/client/views/public/tools/XMIParser.vue";
 
-let $root = "/tools";
+let routesParent = "/tools";
 
 export default [{
-    path: `${$root}/xmi-parser`,
+    path: `${routesParent}/xmi-parser`,
     name: "XMIParser",
     meta: { fixToolbar: true, pageTitle: "XMIParser" },
     components: {
