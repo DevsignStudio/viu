@@ -35,7 +35,12 @@
                 this.$el.style.width = this.$el.parentNode.offsetWidth + "px";
             },
             setScrollbarSize() {
-                this.$refs.scrollbar.$el.style.height = this.$el.offsetHeight + "px";
+                let contentEl = this.$refs.scrollbar.$el.SimpleBar.contentEl;
+                if (parseInt(this.$el.style.maxHeight) < contentEl.offsetHeight) {
+                    this.$refs.scrollbar.$el.style.height = this.$el.style.maxHeight;
+                    return;
+                }
+                this.$refs.scrollbar.$el.style.height = contentEl.offsetHeight + "px";
             },
             findAncestor (el, cls) {
                 while ((el = el.parentElement) && !el.classList.contains(cls));
@@ -51,6 +56,13 @@
                 $(self.$el.parentNode).resize(function() {
                     self.changeSize();
                 });
+
+                $(self.$refs.scrollbar.$el.SimpleBar.contentEl).each(function() {
+                    $(this).resize(function() {
+                        self.changeSize();
+                        self.setScrollbarSize();
+                    });
+                })
                 
                 self.setScrollbarSize();
                 $(self.$el).resize(()=> {

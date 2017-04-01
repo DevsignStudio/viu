@@ -49,3 +49,4 @@ Current progress:
 - [ ] Login Form
 - [ ] Custom cards
 - [ ] Transition Effects
+- [ ] Progress Bar
