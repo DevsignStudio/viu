@@ -17,7 +17,7 @@ import snackbar from './client/snackbar';
 import mixin from './client/PageLoadMixin';
 import confirmation from './client/confirmation';
 
-export const Snackbar = Snackbar;
+export const Snackbar = snackbar;
 export const PageLoadMixin = mixin;
 export const Confirmation = confirmation;
 
