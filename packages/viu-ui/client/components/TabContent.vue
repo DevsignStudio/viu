@@ -68,7 +68,9 @@
                     swipeToSlide: true,
                     swipe: self.swipe,
                     draggable: false,
-                    edgeFriction: 0.05,
+                    edgeFriction: 0,
+                    speed: 200,
+                    touchThreshold: 10,
                 });
 
 

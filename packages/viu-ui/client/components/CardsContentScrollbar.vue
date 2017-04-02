@@ -29,7 +29,7 @@
                         }
                     })
                     let ancestorHeight = revealEl.offsetHeight;
-                    this.$el.style.maxHeight = (ancestorHeight - height + this.$el.offsetHeight - 96) + "px";
+                    this.$el.style.maxHeight = (ancestorHeight - height + this.$el.offsetHeight - 50) + "px";
                 }
                 this.$el.style.width = this.$el.parentNode.offsetWidth + "px";
             },
