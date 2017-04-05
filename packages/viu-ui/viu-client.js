@@ -16,6 +16,7 @@ import Component from './client/components';
 import snackbar from './client/snackbar';
 import mixin from './client/PageLoadMixin';
 import confirmation from './client/confirmation';
+import getParent from "./client/getParent.js";
 
 export const Snackbar = snackbar;
 export const PageLoadMixin = mixin;
@@ -27,6 +28,7 @@ export default {
         Component.install(vmVue);
         vmVue.prototype.$snackbar = snackbar;
         vmVue.prototype.$confirmation = confirmation;
+        vmVue.prototype.$getParent = getParent;
         vmVue.directive("depth", depth);
         vmVue.directive("open", open);
         vmVue.directive("reveal", reveal);
