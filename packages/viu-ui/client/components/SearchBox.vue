@@ -45,6 +45,7 @@ export default {
             let $el = $(this.$el);
             $el.addClass("enable");
             $(this.$refs.input).blur();
+            this.$emit('submit');
         },
         buttonToggler() {
             $el.addClass("enable");
@@ -57,6 +58,10 @@ export default {
         mouseUp() {
             this.disableDisable = false;
             $(this.$refs.input).focus();
+        },
+        clearText() {
+            this.$refs.input.value = "";
+            this.$emit('input', this.$refs.input.value);
         }
     },
     mounted() {

@@ -686,3 +686,22 @@ $colorNameSet: "primary",
         @include createRadio($className, nth($colorNameSet, $i), nth($colorCodeSet, $i));
     }
 }
+
+@mixin not($ignorList...) {
+    //if only a single value given
+    @if (length($ignorList) == 1){
+        //it is probably a list variable so set ignore list to the variable
+        $ignorList: nth($ignorList,1);
+    }
+    //set up an empty $notOutput variable
+    $notOutput: '';
+    //for each item in the list
+    @each $not in $ignorList {
+        //generate a :not([ignored_item]) segment for each item in the ignore list and put them back to back
+        $notOutput: $notOutput + ':not(#{$not})';
+    }
+    //output the full :not() rule including all ignored items
+    &#{$notOutput} {
+        @content;
+    }
+}

@@ -42,8 +42,16 @@
         justify-content: center;
         align-items: center;
         .mdi {
-            color: $color-grey-700;
-            margin-right: 32px;
+            @include not(".viu-checkbox-uncheck", ".viu-checkbox-check", ".viu-radio-uncheck", ".viu-radio-check") {
+                color: $color-grey-700;
+                margin-right: 32px;
+            }
+        }
+        .viu-checkbox, .viu-radio {
+            margin-left: -12px;
+            margin-top: -12px;
+            margin-bottom: -12px;
+            margin-right: 20px;
         }
         .peper-avatar {
             display: inline-block;

@@ -1,9 +1,9 @@
 <template>
-    <div class="viu-list-item">
+    <div class="viu-list-item" >
         <div class="left-content">
             <slot name="left"></slot>
         </div>
-        <div class="content">
+        <div class="content" @click="$emit('click')">
             <div>
                 <slot></slot>
             </div>
