@@ -42,7 +42,9 @@
             enable() {
                 let $el = $(this.$el);
                 $el.addClass("front");
-                $el.addClass("enable");
+                setTimeout(function() {
+                    $el.addClass("enable");
+                }, 100)
             }
         }
     }

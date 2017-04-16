@@ -20,6 +20,11 @@
                     self.reposition();
                 });
                 self.triggerElement.addEventListener("click", function(e) {
+                    var matches = document.querySelectorAll(".viu-menu-content");
+                    matches.forEach(function(element) {
+                        Helper.removeClass(element, "show");
+                    });
+
                     Helper.addClass(self.childElement, "show");
                     let ancestor = Helper.findAncestor(self.$el, "simplebar-scroll-content");
                     if(!ancestor) {
@@ -29,11 +34,16 @@
                         Helper.removeClass(self.childElement, "show");
                     })
                     e.stopPropagation();
-                    Helper.one(self.$root.$el, 'click', function(e) {
+                    
+
+                    Helper.one(document, 'click', function(e) {
                         Helper.removeClass(self.childElement, "show");
                     })
                 });
             });
+        },
+        destroyed() {
+            this.childElement.remove();
         },
         methods: {
             reposition() {

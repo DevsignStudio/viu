@@ -1,8 +1,8 @@
 <template>
-    <div class="viu-menu-select">
+    <div :class="elClass">
         <dropdown-menu>
-            <div class="viu-floating-placeholder" v-if="text">{{label}}</div>
-            <div trigger-menu class="viu-menu-select-description">{{text || label}}</div>
+            <div class="viu-floating-placeholder" v-if="value">{{label}}</div>
+            <div trigger-menu class="viu-menu-select-description">{{description}}</div>
             <menu-content ref="menuContent">
                 <slot></slot>
             </menu-content>
@@ -43,12 +43,27 @@ export default {
             text: null,
         }
     },
+    computed: {
+        description() {
+            if (this.value) {
+                return this.text;
+            }
+            return this.label;
+        },
+        elClass() {
+            return {
+                "viu-menu-select": true,
+                "disabled": this.disabled,
+            }
+        }
+    },
     watch: {
         tempValue(newValue) {
             this.$emit('input', newValue);
         },
         value(newValue) {
             this.resetDropdown();
+            this.$emit("valueChange");
         }
     },
     methods: {
@@ -62,9 +77,8 @@ export default {
                 Helper.removeClass(this.options[i].$el, 'active');
                 if (this.value === this.options[i].value) {
                     Helper.addClass(this.options[i].$el, 'active');
-                    this.text = this.options[i].$el.innerText;
+                    this.text = this.options[i].$el.innerHTML;
                     noMatch = false;
-                    break;
                 }
             }
             if (noMatch) {

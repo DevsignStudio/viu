@@ -106,6 +106,7 @@
         line-height: 18px;
         border-bottom: 1px solid $color-grey-300;
         @include transform(translateZ(0));
+        white-space: nowrap;
     }
     .viu-floating-placeholder {
         position: absolute;
@@ -116,5 +117,19 @@
         @include transform-origin((0));
         @include transition(all 0.2s $decelerationCurve);
         @include transform(translateZ(0));
+        white-space: nowrap;
+    }
+
+    &.disabled {
+        pointer-events: none;
+        color: $color-grey-400;
+
+        .mdi {
+            color: $color-grey-300;
+        }
+
+        .viu-menu-select-description {
+            border-bottom: 1px solid $color-grey-200;
+        }
     }
 }

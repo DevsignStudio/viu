@@ -4671,7 +4671,8 @@ a.color-button {
     -moz-transform: translateZ(0);
     -ms-transform: translateZ(0);
     -o-transform: translateZ(0);
-    transform: translateZ(0); }
+    transform: translateZ(0);
+    white-space: nowrap; }
   .viu-menu-select .viu-floating-placeholder {
     position: absolute;
     top: 0;
@@ -4692,7 +4693,15 @@ a.color-button {
     -moz-transform: translateZ(0);
     -ms-transform: translateZ(0);
     -o-transform: translateZ(0);
-    transform: translateZ(0); }
+    transform: translateZ(0);
+    white-space: nowrap; }
+  .viu-menu-select.disabled {
+    pointer-events: none;
+    color: #bdbdbd; }
+    .viu-menu-select.disabled .mdi {
+      color: #e0e0e0; }
+    .viu-menu-select.disabled .viu-menu-select-description {
+      border-bottom: 1px solid #eeeeee; }
 
 .viu-radio {
   height: 48px;
@@ -4848,17 +4857,26 @@ a.color-button {
   width: 100%;
   height: 100%;
   z-index: -1;
+  display: none !important;
   opacity: 0;
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
-  -webkit-transition: opacity 0.2s cubic-bezier(0.4, 0, 1, 1);
-  -moz-transition: opacity 0.2s cubic-bezier(0.4, 0, 1, 1);
-  -ms-transition: opacity 0.2s cubic-bezier(0.4, 0, 1, 1);
-  -o-transition: opacity 0.2s cubic-bezier(0.4, 0, 1, 1);
-  transition: opacity 0.2s cubic-bezier(0.4, 0, 1, 1); }
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+  -webkit-transition: opacity 0.15s cubic-bezier(0.4, 0, 1, 1);
+  -moz-transition: opacity 0.15s cubic-bezier(0.4, 0, 1, 1);
+  -ms-transition: opacity 0.15s cubic-bezier(0.4, 0, 1, 1);
+  -o-transition: opacity 0.15s cubic-bezier(0.4, 0, 1, 1);
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 1, 1); }
   .reveal .reveal-overlay {
     position: absolute;
     width: 100%;
@@ -4872,28 +4890,29 @@ a.color-button {
     top: 0;
     left: 0; }
   .reveal > *:not(.reveal-overlay) {
-    -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
-    -moz-transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
-    -ms-transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
-    -o-transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
-    transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
-    -webkit-transform: translateY(100px);
-    -moz-transform: translateY(100px);
-    -ms-transform: translateY(100px);
-    -o-transform: translateY(100px);
-    transform: translateY(100px);
+    -webkit-transition: all 0.15s cubic-bezier(0, 0, 0.2, 1);
+    -moz-transition: all 0.15s cubic-bezier(0, 0, 0.2, 1);
+    -ms-transition: all 0.15s cubic-bezier(0, 0, 0.2, 1);
+    -o-transition: all 0.15s cubic-bezier(0, 0, 0.2, 1);
+    transition: all 0.15s cubic-bezier(0, 0, 0.2, 1);
+    -webkit-transform: translateY(100px) translateZ(0);
+    -moz-transform: translateY(100px) translateZ(0);
+    -ms-transform: translateY(100px) translateZ(0);
+    -o-transform: translateY(100px) translateZ(0);
+    transform: translateY(100px) translateZ(0);
     max-width: calc(100% - 16px);
     max-height: calc(100% - 16px); }
   .reveal.enable {
     opacity: 1; }
     .reveal.enable > *:not(.reveal-overlay) {
-      -webkit-transform: translateY(0);
-      -moz-transform: translateY(0);
-      -ms-transform: translateY(0);
-      -o-transform: translateY(0);
-      transform: translateY(0); }
+      -webkit-transform: translateY(0) translateZ(0);
+      -moz-transform: translateY(0) translateZ(0);
+      -ms-transform: translateY(0) translateZ(0);
+      -o-transform: translateY(0) translateZ(0);
+      transform: translateY(0) translateZ(0); }
   .reveal.front {
-    z-index: 1001; }
+    z-index: 1001;
+    display: flex !important; }
 
 .search-box {
   position: initial; }
@@ -5184,7 +5203,7 @@ table {
           padding-bottom: 0;
           overflow-y: hidden;
           text-align: right; }
-          table tbody tr td.td-action .peper-icon-button {
+          table tbody tr td.td-action .viu-icon-button {
             width: 47px;
             height: 47px;
             margin: 0;
@@ -5192,7 +5211,7 @@ table {
             float: none;
             display: inline-block;
             overflow: hidden; }
-            table tbody tr td.td-action .peper-icon-button .mdi {
+            table tbody tr td.td-action .viu-icon-button .mdi {
               font-size: 18px; }
       table tbody tr:hover {
         background: #eeeeee; }

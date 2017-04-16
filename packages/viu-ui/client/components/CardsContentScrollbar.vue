@@ -58,7 +58,6 @@
     
     
                 $(self.$refs.cardscontent.$el).resize(function() {
-                    console.log(this);
                     self.changeSize();
                     self.setScrollbarSize();
                 });

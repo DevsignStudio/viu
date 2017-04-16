@@ -22,15 +22,22 @@
                     self.reposition();
                     timer = setTimeout(()=> {
                         Helper.addClass(self.childElement, 'active');
-                    }, 200);
+                    }, 100);
                 });
 
-                self.triggerElement.addEventListener("mouseout", function(e) {
+                let hover = function(e) {
                     clearTimeout(timer);
                     Helper.removeClass(self.childElement, 'active');
-                });
+                }
+
+                self.triggerElement.addEventListener("mouseout", hover);
+                self.triggerElement.addEventListener("mouseleave", hover);
+                self.triggerElement.addEventListener("mouseup", hover);
             });
             
+        },
+        destroyed() {
+            this.childElement.remove();
         },
         methods: {
             reposition() {

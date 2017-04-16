@@ -1,7 +1,9 @@
 <template>
     <div class="viu-menu-content">
         <scroll-bar>
-            <slot></slot>
+            <div>
+                <slot></slot>
+            </div>
         </scroll-bar>
     </div>
 </template>
