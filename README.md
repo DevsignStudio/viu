@@ -50,3 +50,7 @@ Current progress:
 - [ ] Custom cards
 - [ ] Transition Effects
 - [ ] Progress Bar
+
+## Disclaimer 
+
+This package is only to create material design UI as learning purpose and using a lot of other packages especially https://github.com/Akryum/vue-meteor. For integration of Meteor and Vue, Akryum/vue-meteor is good starting point. He already done a lot of works in this project.
