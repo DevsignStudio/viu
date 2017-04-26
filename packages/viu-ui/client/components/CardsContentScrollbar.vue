@@ -1,7 +1,7 @@
 <template>
     <div style="width: 100px;max-height: 300px;">
         <scroll-bar style="height: 100%" ref="scrollbar">
-            <cards-content ref="cardscontent">
+            <cards-content ref="cardscontent" >
                 <slot></slot>
             </cards-content>
         </scroll-bar>
@@ -32,6 +32,7 @@
                     this.$el.style.maxHeight = (ancestorHeight - height + this.$el.offsetHeight - 50) + "px";
                 }
                 this.$el.style.width = this.$el.parentNode.offsetWidth + "px";
+                this.setScrollbarSize();
             },
             setScrollbarSize() {
                 let contentEl = this.$refs.cardscontent.$el;
@@ -52,21 +53,20 @@
             self.$nextTick(function() {
                 self.changeSize();
     
-                $(self.$el.parentNode).resize(function() {
+                $(window).resize(function() {
                     self.changeSize();
                 });
-    
     
                 $(self.$refs.cardscontent.$el).resize(function() {
                     self.changeSize();
-                    self.setScrollbarSize();
                 });
-    
-                self.setScrollbarSize();
-                $(self.$el).resize(() => {
-                    self.setScrollbarSize();
-                })
             });
         }
     }
 </script>
+
+<style>
+    .no-padding{
+        padding: 0;
+    }
+</style>
