@@ -55,56 +55,10 @@
     export default {
         data() {
             return {
-                code1: `<raised-button class="primary" @click="example1" v-ripple>Click Here</raised-button>
-
-<script>
-    import { Snackbar } from "meteor/skynightz93:viu-ui";
-    export default {
-        methods: {
-            example1() {
-                Snackbar.run("Example 1 Message");
-            },
-        }
-    }
-</script>`,
-                code2: `<raised-button class="primary" @click="example2" v-ripple>Click Here</raised-button>
-
-<script>
-    import { Snackbar } from "meteor/skynightz93:viu-ui";
-    export default {
-        methods: {
-            example2() {
-                Snackbar.run("Example 2 Message", ()=> {
-                    Snackbar.run("Second Message after click")
-                });
-            },
-        }
-    }
-</script>`,
-                code3: `<raised-button class="primary" @click="example3" v-ripple>Click Here</raised-button>
-
-<script>
-    import { Snackbar } from "meteor/skynightz93:viu-ui";
-    export default {
-        methods: {
-            example3() {
-                Snackbar.run("Example 3 Message", ()=>{}, "Retry", "error");
-            },
-        }
-    }
-</script>`,
-                code4: `<raised-button class="primary" @click="example4" v-ripple>Click Here</raised-button>
-
-<script>
-    import { Snackbar } from "meteor/skynightz93:viu-ui";
-    export default {
-        methods: {
-            example4() {
-                Snackbar.run("Example 4 Message", ()=>{}, "Undo", "color-indigo-200");
-            },
-        }
-    }
-</script>`,
+                code1: ``,
+                code2: ``,
+                code3: ``,
+                code4: ``,
             }
         },
         methods: {

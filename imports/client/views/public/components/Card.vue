@@ -149,95 +149,9 @@
         </div>
     </cards-action>
 </cards>`,
-                code2: `<cards>
-    <cards-content class="profile">
-        <avatar text="Nizul Zaim"></avatar>
-        <div class="profile-title">Nizul Zaim</div>
-        <div class="profile-subhead">Sometext Here</div>
-    </cards-content>
-    <cards-image img="/img/a.jpg" v-ripple></cards-image>
-    <divider></divider>
-    <cards-action>
-        <div class="pull-right">
-            <checkbox v-model="checkboxData" 
-                      class="pink" 
-                      check-icon="heart" 
-                      uncheck-icon="heart-outline">
-            </checkbox>
-        </div>
-    </cards-action>
-</cards>
-
-<script>
-    export default {
-        data() {
-            return {
-                checkboxData: false,
-            }
-        }
-    }
-</script>
-`,
-                code3:`<cards>
-    <cards-content class="profile">
-        <avatar text="Nizul Zaim"></avatar>
-        <div class="profile-title">Nizul Zaim</div>
-        <div class="profile-subhead">Sometext Here</div>
-    </cards-content>
-    <cards-image img="/img/a.jpg" v-ripple></cards-image>
-    <cards-content>
-        <div class="font-body no-margin font-medium">
-            Testing Text Something
-        </div>
-        <div class="font-body no-margin">
-            Wow this look amazing bla bla
-        </div>
-    </cards-content>                                    
-    <divider></divider>
-    <cards-action>
-        <icon-button name="heart" class="primary" v-ripple></icon-button>
-        <dropdown-menu>
-            <icon-button name="share" 
-                         class="primary" 
-                         v-ripple 
-                         trigger-menu>
-            </icon-button>
-            <menu-content>
-                <menu-item>Facebook</menu-item>
-                <menu-item>Google+</menu-item>
-                <menu-item>Twitter</menu-item>
-            </menu-content>
-        </dropdown-menu>
-    </cards-action>
-</cards>`,
-                code4: `<cards>
-    <cards-content class="profile">
-        <avatar text="Nizul Zaim"></avatar>
-        <div class="profile-title">Nizul Zaim</div>
-        <div class="profile-subhead">Sometext Here</div>
-    </cards-content>
-    <cards-image img="/img/a.jpg" v-ripple></cards-image>
-    <cards-action>
-        <icon-button name="heart" class="primary" v-ripple></icon-button>
-        <dropdown-menu>
-            <icon-button name="share" class="primary" v-ripple trigger-menu></icon-button>
-            <menu-content>
-                <menu-item>Facebook</menu-item>
-                <menu-item>Google+</menu-item>
-                <menu-item>Twitter</menu-item>
-            </menu-content>
-        </dropdown-menu>
-    </cards-action>
-    <divider></divider>
-    <cards-content>
-        <div class="font-body no-margin font-medium">
-            Testing Text Something
-        </div>
-        <div class="font-body no-margin">
-            Wow this look amazing bla bla
-        </div>
-    </cards-content>                                    
-</cards>`
+                code2: ``,
+                code3:``,
+                code4: ``
             }
         }
     }

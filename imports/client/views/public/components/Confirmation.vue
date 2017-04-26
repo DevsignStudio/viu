@@ -39,42 +39,8 @@
     export default {
         data() {
             return {
-                code1: `<raised-button class="primary" @click="confirmation1" v-ripple>
-    <icon name="delete"></icon> Delete
-</raised-button>
-
-<script>
-    import { Snackbar, Confirmation } from "meteor/skynightz93:viu-ui";
-    export default {
-        methods:{
-            confirmation1() {
-                Confirmation.run("Are you sure want to delete", ()=>{
-                    Snackbar.run("Confirm delete");
-                }, ()=>{
-                    Snackbar.run("Cancel delete");
-                });
-            },
-        }
-    }
-</script>`,
-                code2: `<raised-button class="primary" @click="confirmation2" v-ripple>
-    <icon name="send"></icon> Send
-</raised-button>
-
-<script>
-    import { Snackbar, Confirmation } from "meteor/skynightz93:viu-ui";
-    export default {
-        methods:{
-            confirmation2() {
-                Confirmation.run("Are you sure want to send this message?", ()=>{
-                    Snackbar.run("Confirm send");
-                }, ()=>{
-                    Snackbar.run("Don't send'");
-                }, "Send Message", "Send", "Don't Send");
-            }
-        }
-    }
-</script>`,
+                code1: ``,
+                code2: ``,
             }
         },
         methods:{

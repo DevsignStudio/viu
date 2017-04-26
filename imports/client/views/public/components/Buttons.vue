@@ -83,27 +83,7 @@
 <color-button class="primary" v-ripple>Button</color-button>
 <color-button class="accent" v-ripple>Button</color-button>
 <color-button v-ripple disabled>Button</color-button>`,
-                code4: `<raised-button class="primary" type="button" v-ripple>Button</raised-button>
-<raised-button class="primary" v-ripple><icon name="facebook"></icon> Facebook</raised-button>
-<raised-button class="primary" link="/components/cards" v-ripple>Link Components Card</raised-button>
-<raised-button class="primary" @click="click" v-ripple>Events Click</raised-button>
-<form>
-    <raised-button class="primary" type="submit" @submit="submit" v-ripple>Submit</raised-button>
-</form>
-
-<script>
-    import {Snackbar } from "meteor/skynightz93:viu-ui";
-    export default {
-        methods: {
-            submit() {
-                Snackbar.run("Button has been submit");
-            },
-            click() {
-                Snackbar.run("Button has been click");
-            }
-        }
-    }
-</script>`,
+                code4: ``,
             }
         },
         methods: {

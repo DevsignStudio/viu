@@ -93,33 +93,7 @@
         <menu-item>Testing</menu-item>
     </menu-content>
 </dropdown-menu>`,
-                code3: `<div class="col-xd-4">
-    <dropdown-select v-model="selectValue" label="Name">
-        <menu-option value="nizul">Nizul</menu-option>
-        <menu-option value="zaim">Zaim</menu-option>
-        <menu-option value="lili">Lili</menu-option>
-        <menu-option value="madiha">Madiha</menu-option>
-        <menu-option value="anuar">Anuar</menu-option>
-        <menu-option value="zainal_abidin">Zainal Abidin</menu-option>
-        <menu-option value="sulaiman">Sulaiman</menu-option>
-    </dropdown-select>
-</div>
-<raised-button class="accent"
-               v-ripple 
-               @click="selectValue = 'madiha'">
-    <icon name="refresh"></icon> 
-    Change to Madiha
-</raised-button>
-
-<script>
-    export default {
-        data() {
-            return {
-                selectValue: "",
-            }
-        },
-    }
-</script>`,
+                code3: ``,
                 selectValue: "",
             }
         },

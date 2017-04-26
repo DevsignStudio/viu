@@ -58,26 +58,8 @@
     export default {
         data() {
             return {
-                code1: `<accordion>
-    <accordion-item>
-        <accordion-item-header>Header</accordion-item-header>
-        <accordion-item-content>Content</accordion-item-content>
-    </accordion-item>
-    <accordion-item>
-        <accordion-item-header>Header</accordion-item-header>
-        <accordion-item-content>Content</accordion-item-content>
-    </accordion-item>
-</accordion>`,
-                code2: `<accordion :collapsible="true">
-    <accordion-item>
-        <accordion-item-header>Header</accordion-item-header>
-        <accordion-item-content>Content</accordion-item-content>
-    </accordion-item>
-    <accordion-item>
-        <accordion-item-header>Header</accordion-item-header>
-        <accordion-item-content>Content</accordion-item-content>
-    </accordion-item>
-</accordion>`,
+                code1: ``,
+                code2: ``,
             }
         },
     }

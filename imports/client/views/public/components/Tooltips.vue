@@ -55,24 +55,8 @@
     export default {
         data() {
             return {
-                code1: `<tooltip text="Facebook">
-    <icon-button name="facebook" trigger-tooltip class="color-indigo"></icon-button>
-</tooltip>
-<tooltip text="Google+">
-    <icon-button name="google-plus" trigger-tooltip class="color-red"></icon-button>
-</tooltip>
-<tooltip text="Twitter">
-    <icon-button name="twitter" trigger-tooltip class="color-blue"></icon-button>
-</tooltip>`,
-                code2: `<tooltip text="Facebook">
-    <raised-button trigger-tooltip class="background-indigo color-white">Facebook</raised-button>
-</tooltip>
-<tooltip text="Google+">
-    <raised-button trigger-tooltip class="background-red color-white">Google+</raised-button>
-</tooltip>
-<tooltip text="Twitter">
-    <raised-button trigger-tooltip class="background-blue color-white">Twitter</raised-button>
-</tooltip>`,
+                code1: ``,
+                code2: ``,
             }
         }
     }
