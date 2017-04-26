@@ -1,7 +1,7 @@
 <template>
     <div :class="elClass">
         <dropdown-menu>
-            <div class="viu-floating-placeholder" v-if="value">{{label}}</div>
+            <div class="viu-floating-placeholder" v-if="value !== '' && value !== undefined">{{label}}</div>
             <div trigger-menu class="viu-menu-select-description">{{description}}</div>
             <menu-content ref="menuContent">
                 <slot></slot>
@@ -45,10 +45,11 @@ export default {
     },
     computed: {
         description() {
-            if (this.value) {
-                return this.text;
+            if (this.value === "" || this.value === undefined) {
+                return this.label;
             }
-            return this.label;
+            return this.text;
+            
         },
         elClass() {
             return {
