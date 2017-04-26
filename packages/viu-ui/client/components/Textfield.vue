@@ -1,12 +1,13 @@
 <template>
     <div :class="elClass">
-        <textarea rows="1" v-if="type === 'multiline'" :disabled="disabled || isInfo" @focus="focusInput" ref="textarea" @input="updateValue($event.target.value)" v-model="textareaData"></textarea>
-        <input v-if="type!== 'multiline'" :disabled="disabled || isInfo" ref="input" :type="type" :value="value" @focus="focusInput" @input="updateValue($event.target.value)">
+        <textarea rows="1" v-if="type === 'multiline'" :autocomplete="autocomplete" :autocorrect="autocorrect" :autocapitalize="autocapitalize" :spellcheck="spellcheck" :disabled="disabled || isInfo" @focus="focusInput" ref="textarea" @input="updateValue($event.target.value)" v-model="textareaData"></textarea>
+        <input v-if="type!== 'multiline'" :disabled="disabled || isInfo" ref="input" :type="type" :autocomplete="autocomplete" :autocorrect="autocorrect" :autocapitalize="autocapitalize" :spellcheck="spellcheck" :value="value" @focus="focusInput" @input="updateValue($event.target.value)">
         <div class="viu-textfield-floating-placeholder" @click="focusInput">{{placeholder}}</div>
         <div class="viu-textfield-line"></div>
         <div :class="messageClass">{{message}}</div>
     </div>
 </template>
+
 
 <script>
     import autosize from "../plugin/autosize.min.js";
@@ -34,6 +35,22 @@
                 default: false,
                 type: Boolean,
             },
+            autocomplete: {
+                default: "",
+                type: String,
+            },
+            autocorrect: {
+                default: "",
+                type: String,
+            },
+            autocapitalize: {
+                default: "",
+                type: String,
+            },
+            spellcheck: {
+                default:"",
+                type: String,
+            }
         },
         computed: {
             messageClass() {
