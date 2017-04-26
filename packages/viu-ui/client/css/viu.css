@@ -3183,6 +3183,8 @@ a {
       display: -webkit-flex;
       display: flex;
       padding: 2px 0; }
+      .viu-list .viu-list-item .right-content .mdi:not(.viu-checkbox-uncheck):not(.viu-checkbox-check):not(.viu-radio-uncheck):not(.viu-radio-check) {
+        margin: 0; }
     .viu-list .viu-list-item .content {
       -webkit-box-flex: 1;
       -moz-box-flex: 1;
@@ -3264,12 +3266,7 @@ a {
   z-index: 0;
   height: 100%;
   overflow: hidden;
-  -webkit-overflow-scrolling: touch;
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0); }
+  -webkit-overflow-scrolling: touch; }
   .simplebar .simplebar-scroll-content {
     overflow: auto;
     position: relative;
@@ -3412,13 +3409,12 @@ a {
   .viu-app-bar .viu-icon-button {
     width: 48px;
     height: 48px;
-    padding: 12px;
     margin-top: 4px; }
     @media (min-width: 768px) {
-      .viu-app-bar .viu-icon-button {
+      .viu-app-bar .viu-icon-button .mdi {
         width: 56px;
         height: 56px;
-        padding: 16px; } }
+        line-height: 56px; } }
   .viu-app-bar .background {
     width: 100%;
     height: 100%;
@@ -3974,7 +3970,7 @@ a.color-button {
   width: 48px;
   height: 48px;
   display: block;
-  padding: 12px;
+  padding: 0px;
   color: inherit;
   background: transparent;
   margin: 0;
@@ -3996,6 +3992,10 @@ a.color-button {
   transform: translateZ(0);
   display: inline-block;
   float: left; }
+  .viu-icon-button .mdi {
+    line-height: 48px;
+    width: 48px;
+    height: 48px; }
   .viu-icon-button.center {
     margin-left: auto;
     margin-right: auto; }
@@ -4006,7 +4006,7 @@ a.color-button {
   .viu-icon-button.pressed {
     background: rgba(0, 0, 0, 0.1); }
   .viu-icon-button:disabled, .viu-icon-button.disabled, .viu-icon-button.disabled:focus {
-    color: #9e9e9e;
+    color: #9e9e9e !important;
     background: transparent;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -4043,10 +4043,8 @@ a.color-button {
       box-shadow: none;
       pointer-events: none; }
   @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    .viu-icon-button {
-      padding-bottom: 10px; }
-      .viu-icon-button .mdi:before {
-        line-height: 26px; } }
+    .viu-icon-button .mdi:before {
+      line-height: 26px; } }
 
 .load-img {
   -webkit-backface-visibility: hidden;
@@ -4864,14 +4862,6 @@ a.color-button {
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  -moz-perspective: 1000;
-  -ms-perspective: 1000;
-  perspective: 1000;
   -webkit-transition: opacity 0.15s cubic-bezier(0.4, 0, 1, 1);
   -moz-transition: opacity 0.15s cubic-bezier(0.4, 0, 1, 1);
   -ms-transition: opacity 0.15s cubic-bezier(0.4, 0, 1, 1);
@@ -4882,11 +4872,6 @@ a.color-button {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
     top: 0;
     left: 0; }
   .reveal > *:not(.reveal-overlay) {
@@ -4905,11 +4890,11 @@ a.color-button {
   .reveal.enable {
     opacity: 1; }
     .reveal.enable > *:not(.reveal-overlay) {
-      -webkit-transform: translateY(0) translateZ(0);
-      -moz-transform: translateY(0) translateZ(0);
-      -ms-transform: translateY(0) translateZ(0);
-      -o-transform: translateY(0) translateZ(0);
-      transform: translateY(0) translateZ(0); }
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+      transform: translateY(0); }
   .reveal.front {
     z-index: 1001;
     display: flex !important; }

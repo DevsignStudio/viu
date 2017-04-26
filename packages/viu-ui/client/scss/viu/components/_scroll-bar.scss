@@ -4,7 +4,7 @@
     height: 100%;
     overflow: hidden;
     -webkit-overflow-scrolling: touch;
-    @include transform(translateZ(0));
+    // @include transform(translateZ(0));
     .simplebar-scroll-content {
         overflow: auto;
         position: relative;

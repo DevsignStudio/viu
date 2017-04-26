@@ -64,6 +64,11 @@
         .right-content {
             @include displayFlex();
             padding: 2px 0;
+            & .mdi  {
+                @include not(".viu-checkbox-uncheck", ".viu-checkbox-check", ".viu-radio-uncheck", ".viu-radio-check") {
+                    margin: 0;
+                }
+            }
         }
         .content {
             @include flex(1);

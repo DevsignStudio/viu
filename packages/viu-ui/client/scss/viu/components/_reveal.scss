@@ -8,14 +8,12 @@
     display: none !important;
     opacity: 0;
     @include transform(translateZ(0));
-    @include renderIssue();
     @include transition(opacity 0.15s $accelerationCurve);
     .reveal-overlay {
         position: absolute;
         width: 100%;
         height: 100%;
         background: rgba($color-black, 0.2);
-        @include transform(translateZ(0));
         top: 0;
         left: 0;
     }
@@ -28,7 +26,7 @@
     &.enable {
         opacity: 1;
         &>*:not(.reveal-overlay) {
-            @include transform(translateY(0) translateZ(0));
+            @include transform(translateY(0));
         }
     }
     &.front {
