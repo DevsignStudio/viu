@@ -67,10 +67,10 @@ export default {
     mounted() {
         let $el = $(this.$el);
         let self = this;
-        $("*").bind("scroll.searchbox", function() {
-            $el.removeClass("enable");
-            $(self.$refs.input).blur();
-        })
+        // $("*").bind("scroll.searchbox", function() {
+        //     $el.removeClass("enable");
+        //     $(self.$refs.input).blur();
+        // })
 
         $(window).keydown(function(e){
             if ((e.ctrlKey || e.metaKey) && e.keyCode === 70) {
