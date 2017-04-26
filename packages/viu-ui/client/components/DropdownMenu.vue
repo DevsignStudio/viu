@@ -24,8 +24,10 @@
                     matches.forEach(function(element) {
                         Helper.removeClass(element, "show");
                     });
-
-                    Helper.addClass(self.childElement, "show");
+                    setTimeout(()=> {
+                        Helper.addClass(self.childElement, "show");
+                    }, 100)
+                    
                     let ancestor = Helper.findAncestor(self.$el, "simplebar-scroll-content");
                     if(!ancestor) {
                         ancestor = Helper.findAncestor(self.$el, "simplebar");
