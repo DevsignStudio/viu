@@ -72,6 +72,7 @@
                     autoplaySpeed: self.autoplaySpeed,
                 });
                 self.$slider.on('afterChange', function(slick, currentSlide){
+                    self.$emit("slideChange", currentSlide.currentSlide);
                     self.lastSlide = (currentSlide.slideCount -1) === currentSlide.currentSlide;
                 });
             })
