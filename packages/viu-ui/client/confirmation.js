@@ -17,7 +17,9 @@ export default {
         this.$buttonConfirm.html(confirmText);
         this.$buttonCancel.html(cancelText);
         self.$el.addClass("front");
-        self.$el.addClass("enable");
+        setTimeout(function() {
+            self.$el.addClass("enable");
+        }, 100);
         this.$buttonConfirm.one("click", function() {
             callbackConfirm();
         });
