@@ -1,6 +1,6 @@
 <template>
     <div class="reveal row no-gutter center-xs middle-xs">
-        <div :class="{'reveal-overlay': true, 'has-overlay': hasOverlay}" @click="disable"></div>
+        <div :class="{'reveal-overlay': true, 'has-overlay': hideOverlay}" @click="disable"></div>
         <slot></slot>
     </div>
 </template>
@@ -8,11 +8,20 @@
 <script>
     export default {
         props: {
-            hasOverlay: {
+            enableOverlayClick: {
                 default: true,
             },
             value: {
                 default: false,
+            }
+        },
+        computed: {
+            hideOverlay() {
+                if (this.value && !this.enableOverlayClick) {
+                    return false;
+                }
+
+                return true;
             }
         },
         watch: {
@@ -26,7 +35,7 @@
         },
         methods: {
             disable() {
-                if(!this.hasOverlay) {
+                if(!this.hideOverlay) {
                     return;
                 }
                 let $el = $(this.$el);
