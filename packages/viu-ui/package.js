@@ -1,12 +1,8 @@
 Package.describe({
     name: 'devsignstudio:viu-ui',
-    version: '0.1.2',
-    // Brief, one-line summary of the package.
+    version: '0.1.3',
     summary: 'Material Design vue-meteor package',
-    // URL to the Git repository containing the source code for this package.
     git: 'https://github.com/DevsignStudio/viu/',
-    // By default, Meteor will default to using README.md for documentation.
-    // To avoid submitting documentation, set this field to null.
     documentation: 'README.md'
 });
 
@@ -33,7 +29,7 @@ Package.onUse(function(api) {
     });
     api.versionsFrom('1.4.1.1');
     api.use('ecmascript');
-    api.use(['jquery','akryum:vue-component@0.8.10'], 'client');
+    api.use(['jquery','akryum:vue-component@0.8.18'], 'client');
     api.mainModule('viu-client.js', 'client');
     api.addFiles(['client/css/materialdesignicons.css', 'client/css/viu.css', 'client/plugin/c3/c3.css'], 'client');
 
