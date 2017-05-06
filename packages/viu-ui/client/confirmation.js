@@ -4,6 +4,7 @@ export default {
     $message: undefined,
     $buttonConfirm: undefined,
     $buttonCancel: undefined,
+    
     run(message, callbackConfirm = function() {}, callbackCancel = function() {}, title = "Confirm", confirmText = "Confirm", cancelText = "Cancel") {
         let self = this;
         if (!this.$el) { this.$el = $('#confirmationDialogforPlugin'); }
@@ -20,12 +21,20 @@ export default {
         setTimeout(function() {
             self.$el.addClass("enable");
         }, 100);
+
+        let eventStop = false;
         this.$buttonConfirm.one("click", function() {
-            callbackConfirm();
+            if (!eventStop) {
+                callbackConfirm();
+                eventStop = true;
+            }
         });
 
         this.$buttonCancel.one("click", function() {
-            callbackCancel();
+            if (!eventStop) {
+                callbackCancel();
+                eventStop = true;
+            }
         });
     }
 };
