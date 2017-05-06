@@ -1,6 +1,6 @@
 <template>
     <div class="viu-tab-sub-header">
-        <div class="swipe-tabs">
+        <div class="swipe-tabs" style="background: transparent!important">
             <slot></slot>
         </div>
     </div>
