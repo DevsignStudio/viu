@@ -1,10 +1,10 @@
 <template>
     <div class="peper-cards-image">
         <div style="position: absolute;width: 100%; height: 100%;" v-if="imgSmall !== ''">
-            <load-img :img="img" :img-small="imgSmall"></load-img>
+            <load-img :img="img" :img-small="imgSmall" v-if="img"></load-img>
         </div>
         <div style="position: absolute;width: 100%; height: 100%;" v-if="imgSmall === ''">
-            <img :src="img" alt="">
+            <img :src="img" alt="" v-if="img">
         </div>
         <div class="peper-cards-image-overlay"></div>
         <slot></slot>
