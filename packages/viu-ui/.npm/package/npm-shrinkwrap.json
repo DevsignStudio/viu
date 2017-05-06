@@ -10,6 +10,21 @@
       "resolved": "https://registry.npmjs.org/blurify/-/blurify-1.0.7.tgz",
       "from": "blurify@1.0.7"
     },
+    "draggabilly": {
+      "version": "2.1.1",
+      "resolved": "https://registry.npmjs.org/draggabilly/-/draggabilly-2.1.1.tgz",
+      "from": "draggabilly@2.1.1"
+    },
+    "ev-emitter": {
+      "version": "1.0.3",
+      "resolved": "https://registry.npmjs.org/ev-emitter/-/ev-emitter-1.0.3.tgz",
+      "from": "ev-emitter@>=1.0.1 <1.1.0"
+    },
+    "get-size": {
+      "version": "2.0.2",
+      "resolved": "https://registry.npmjs.org/get-size/-/get-size-2.0.2.tgz",
+      "from": "get-size@>=2.0.2 <2.1.0"
+    },
     "is-touch": {
       "version": "1.0.2",
       "resolved": "https://registry.npmjs.org/is-touch/-/is-touch-1.0.2.tgz",
@@ -74,6 +89,16 @@
       "version": "1.1.12",
       "resolved": "https://registry.npmjs.org/tilt.js/-/tilt.js-1.1.12.tgz",
       "from": "tilt.js@1.1.12"
+    },
+    "unidragger": {
+      "version": "2.1.0",
+      "resolved": "https://registry.npmjs.org/unidragger/-/unidragger-2.1.0.tgz",
+      "from": "unidragger@>=2.1.0 <2.2.0"
+    },
+    "unipointer": {
+      "version": "2.1.0",
+      "resolved": "https://registry.npmjs.org/unipointer/-/unipointer-2.1.0.tgz",
+      "from": "unipointer@>=2.1.0 <2.2.0"
     },
     "velocity-animate": {
       "version": "1.4.2",

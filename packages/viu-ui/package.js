@@ -1,6 +1,6 @@
 Package.describe({
     name: 'devsignstudio:viu-ui',
-    version: '0.1.3',
+    version: '0.2.0',
     summary: 'Material Design vue-meteor package',
     git: 'https://github.com/DevsignStudio/viu/',
     documentation: 'README.md'
@@ -26,12 +26,35 @@ Package.onUse(function(api) {
         'slick-carousel': '1.6.0',
         'blurify': '1.0.7',
         'node-vibrant': '3.0.0-alpha.2',
+        'draggabilly': '2.1.1',
     });
+
     api.versionsFrom('1.4.1.1');
     api.use('ecmascript');
+    api.use('fourseven:scss@4.5.0');
     api.use(['jquery','akryum:vue-component@0.8.18'], 'client');
     api.mainModule('viu-client.js', 'client');
-    api.addFiles(['client/css/materialdesignicons.css', 'client/css/viu.css', 'client/plugin/c3/c3.css'], 'client');
+    api.addFiles([
+	'client/css/materialdesignicons.css', 
+	'client/css/viu.css', 
+	'client/plugin/c3/c3.css'], 'client');
+    api.addFiles([
+    "import.scss",
+    "client/scss/viu/base/_color.scss",
+    "client/scss/viu/base/_theme.scss",
+    "client/scss/viu/base/_mixin.scss",
+    "client/scss/viu/base/_normalize.scss",
+    "client/scss/viu/base/_after.scss",
+    "client/scss/viu/base/_background.scss",
+    "client/scss/viu/base/_font-roboto.scss",
+    "client/scss/viu/base/_grid.scss",
+    "client/scss/viu/base/_loader.scss",
+    "client/scss/viu/base/_ripple.scss",
+    "client/scss/viu/base/_text-color.scss",
+    "client/scss/viu/base/_typography.scss",
+    "client/scss/viu/base/_z-depth.scss"],
+    "client",
+    {isImport: true});
 
     api.addAssets([
         // 'particles.json',
