@@ -13,7 +13,6 @@
                 if (itemActive) {
                     Helper.removeClass(itemActive, "active")
                 }
-                Helper.addClass(this.$el, "active");
                 this.$emit("click");
             }
         },
