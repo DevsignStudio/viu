@@ -1,0 +1,118 @@
+
+.viu-range-slider-wrap {
+    // padding-left: 18px;
+    // padding-right: 18px;
+    input {
+        display: none;
+    }
+
+    .viu-range-slider {
+        position: relative;
+        width: 100%;
+        height: 48px;
+        @include displayFlex();
+        align-items: center;
+        outline: none;
+
+        &:hover {
+            .viu-range-slider-thumb {
+                @include transform(scale(1.1));
+            }
+        }
+
+        &:focus, .dragging {
+            .viu-range-slider-thumb {
+                @include transform(scale(1.1));
+            }
+            .viu-range-slider-focus-ring {
+                @include transform(scale(1));
+            }
+        }
+    }
+
+    .viu-range-slider-wrapper {
+        position: relative;
+        width: 100%;
+    }
+
+    .viu-range-slider-track-container {
+        position: relative;
+    }
+
+    .viu-range-slider-track {
+        height: 2px;
+        background-color: rgba(0, 0, 0, 0.28);
+        width: 100%;
+    }
+
+    .viu-range-slider-track-fill {
+        position: absolute;
+        top: 0;
+        height: 2px;
+        background-color: $theme-primary;
+    }
+
+    .viu-range-slider-thumb-container {
+        position: absolute;
+        left: 0;
+        @include displayFlex();
+        align-items: center;
+        justify-content: center;
+        margin-top: -18px;
+        margin-left: -18px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .viu-range-slider-thumb {
+        @include displayFlex();
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 16px;
+        background-color: $theme-primary;
+        border-radius: 50%;
+        transition-property: transform;
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
+        transform: scale(1);
+    }
+
+    .viu-range-slider-focus-ring {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: rgba($theme-primary, 0.38);
+        transition: transform 0.2s ease;
+        transform: scale(0);
+    }
+
+    .viu-range-slider-containment {
+        left: 0;
+        right: 0;
+        position: absolute;
+        margin-left: -18px;
+        margin-right: -18px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

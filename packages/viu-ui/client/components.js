@@ -51,6 +51,7 @@ import TabItem from './components/TabItem.vue';
 import Textfield from './components/Textfield.vue';
 import Tooltip from './components/Tooltip.vue';
 import TransitionBlock from './components/TransitionBlock.vue';
+import RangeSlider from './components/RangeSlider.vue';
 
 export default {
     install(vmVue) {
@@ -94,6 +95,7 @@ export default {
         vmVue.component("page-container", PageContainer);
         vmVue.component("radio", Radio);
         vmVue.component("raised-button", RaisedButton);
+        vmVue.component("range-slider", RangeSlider);
         vmVue.component("reveal", Reveal);
         vmVue.component("search-box", SearchBox);
         vmVue.component("side-navigation", SideNavigation);

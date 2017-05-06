@@ -3411,10 +3411,13 @@ a {
     height: 48px;
     margin-top: 4px; }
     @media (min-width: 768px) {
-      .viu-app-bar .viu-icon-button .mdi {
+      .viu-app-bar .viu-icon-button {
         width: 56px;
-        height: 56px;
-        line-height: 56px; } }
+        height: 56px; }
+        .viu-app-bar .viu-icon-button .mdi {
+          width: 56px;
+          height: 56px;
+          line-height: 56px; } }
   .viu-app-bar .background {
     width: 100%;
     height: 100%;
@@ -4847,6 +4850,98 @@ a.color-button {
     color: #795548; }
   .viu-radio.brown input[type="radio"]:checked ~ .viu-radio-ripple {
     background-color: rgba(121, 85, 72, 0.2); }
+
+.viu-range-slider-wrap input {
+  display: none; }
+.viu-range-slider-wrap .viu-range-slider {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  outline: none; }
+  .viu-range-slider-wrap .viu-range-slider:hover .viu-range-slider-thumb {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1); }
+  .viu-range-slider-wrap .viu-range-slider:focus .viu-range-slider-thumb, .viu-range-slider-wrap .viu-range-slider .dragging .viu-range-slider-thumb {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1); }
+  .viu-range-slider-wrap .viu-range-slider:focus .viu-range-slider-focus-ring, .viu-range-slider-wrap .viu-range-slider .dragging .viu-range-slider-focus-ring {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); }
+.viu-range-slider-wrap .viu-range-slider-wrapper {
+  position: relative;
+  width: 100%; }
+.viu-range-slider-wrap .viu-range-slider-track-container {
+  position: relative; }
+.viu-range-slider-wrap .viu-range-slider-track {
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.28);
+  width: 100%; }
+.viu-range-slider-wrap .viu-range-slider-track-fill {
+  position: absolute;
+  top: 0;
+  height: 2px;
+  background-color: #2a56c6; }
+.viu-range-slider-wrap .viu-range-slider-thumb-container {
+  position: absolute;
+  left: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -18px;
+  margin-left: -18px;
+  width: 36px;
+  height: 36px; }
+.viu-range-slider-wrap .viu-range-slider-thumb {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  background-color: #2a56c6;
+  border-radius: 50%;
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transform: scale(1); }
+.viu-range-slider-wrap .viu-range-slider-focus-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(42, 86, 198, 0.38);
+  transition: transform 0.2s ease;
+  transform: scale(0); }
+.viu-range-slider-wrap .viu-range-slider-containment {
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin-left: -18px;
+  margin-right: -18px; }
 
 .reveal {
   position: fixed;
