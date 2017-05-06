@@ -48,6 +48,8 @@
         height: 48px;
         margin-top: 4px;
         @include breakpoint("xd") {
+            width: 56px;
+            height: 56px;
             .mdi {
                 width: 56px;
                 height: 56px;
