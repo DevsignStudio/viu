@@ -8,25 +8,27 @@
     display: none !important;
     opacity: 0;
     @include transform(translateZ(0));
-    @include transition(opacity 0.15s $accelerationCurve);
+    @include transition(all 0.15s $fastOutLinearIn);
     .reveal-overlay {
         position: absolute;
         width: 100%;
         height: 100%;
         background: rgba($color-black, 0.2);
+        @include transform(translateZ(0));
         top: 0;
         left: 0;
     }
     &>*:not(.reveal-overlay) {
-        @include transition(all 0.15s $decelerationCurve);
+        @include transition(all 0.2s $fastOutLinearIn);
         @include transform(translateY(100px) translateZ(0));
         max-width: calc(100% - 16px);
         max-height: calc(100% - 16px);
     }
     &.enable {
+        @include transition(opacity 0.15s $fastOutSlowIn);
         opacity: 1;
         &>*:not(.reveal-overlay) {
-            @include transform(translateY(0));
+            @include transform(translateY(0) translateZ(0));
         }
     }
     &.front {
