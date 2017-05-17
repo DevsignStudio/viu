@@ -1,6 +1,6 @@
 Package.describe({
     name: 'devsignstudio:viu-ui',
-    version: '0.3.2',
+    version: '0.3.3',
     summary: 'Material Design vue-meteor package',
     git: 'https://github.com/DevsignStudio/viu/',
     documentation: 'README.md'

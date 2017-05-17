@@ -7,7 +7,7 @@ export default {
     
     run(message, callbackConfirm = function() {}, callbackCancel = function() {}, title = "Confirm", confirmText = "Confirm", cancelText = "Cancel") {
         let self = this;
-        if (!this.$el) { this.$el = $('#confirmationDialogforPlugin'); }
+        if (!this.$el) { this.$el = $(document.getElementById('confirmationDialogforPlugin').elementNodes); }
         if (!this.$message) { this.$message = this.$el.find(".dialog-message"); }
         if (!this.$title) { this.$title = this.$el.find(".dialog-title"); }
         if (!this.$buttonConfirm) { this.$buttonConfirm = this.$el.find(".dialog-confirm-button"); }
